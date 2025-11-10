@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=18 format=3 uid="uid://xmkhgq3rkawk"]
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=17 format=3 uid="uid://xmkhgq3rkawk"]
 
 [ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="1_jcvt3"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="3_n0tye"]
@@ -12,7 +12,6 @@
 [ext_resource type="Resource" uid="uid://dbaqpmp7n1ngx" path="res://objects/items/resources/accessories/backpacks/dragon_wings.tres" id="11_1bhgl"]
 [ext_resource type="Script" uid="uid://ts8xpgftpmty" path="res://objects/player/character.gd" id="11_4wqun"]
 [ext_resource type="Resource" uid="uid://b6h44ufinocuu" path="res://objects/items/resources/active/jellybean_jar.tres" id="12_jcvt3"]
-[ext_resource type="Resource" uid="uid://c8yh80vqngv1b" path="res://objects/items/resources/passive/music_treasure.tres" id="13_jcvt3"]
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("3_n0tye")
@@ -50,14 +49,13 @@ bottoms = SubResource("Resource_ugrs1")
 script = ExtResource("11_4wqun")
 character_name = "Quacksane Teto"
 character_summary = "Starts with both Dragon Wings and Jellybean Jar
-Stats begin very low to compensate
-Comes with a Music Treasure to help early on"
+Stats begin very low to compensate"
 character_blurb = "An upcoming idol who dreams of becoming a star. Has an insatiable hunger for bread and is more
 chimera than Toon."
 dna = SubResource("Resource_ax4gq")
 gag_loadout = ExtResource("10_utsjo")
 starting_laff = 30
-starting_items = Array[ExtResource("1_jcvt3")]([ExtResource("11_1bhgl"), ExtResource("12_jcvt3"), ExtResource("13_jcvt3")])
+starting_items = Array[ExtResource("1_jcvt3")]([ExtResource("11_1bhgl"), ExtResource("12_jcvt3")])
 base_stats = SubResource("Resource_jj61k")
 starting_gags = Dictionary[String, int]({
 "Drop": 1,
