@@ -1,47 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://brj7lur5ri6k4"]
+[gd_scene load_steps=2 format=3 uid="uid://brj7lur5ri6k4"]
 
-[ext_resource type="Texture2D" uid="uid://cil0jyf77nu68" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/goldenring.png" id="1_15cbn"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bshu"]
-transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_15cbn")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_wra8v"]
-_surfaces = [{
-"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
-"name": "Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_hjh8r"]
-resource_name = "bouncecheck_Plane"
-_surfaces = [{
-"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
-"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0),
-"format": 34896613399,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
-"material": SubResource("StandardMaterial3D_1bshu"),
-"name": "Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 255, 255, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wra8v")
+[ext_resource type="PackedScene" uid="uid://3iof23nt5oa4" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/models/accessories/goldring.glb" id="1_15cbn"]
 
 [node name="monarch_butterfly" type="Node3D"]
 
-[node name="planething" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8.742278e-09, 0.08, 0, -0.2, -3.496911e-09, 0, 0, 0, 0.199, 0, 0, 0)
-mesh = SubResource("ArrayMesh_hjh8r")
-skeleton = NodePath("")
+[node name="goldring" parent="." instance=ExtResource("1_15cbn")]
+transform = Transform3D(-8.742278e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.742278e-09, 0, -0.18, 0)

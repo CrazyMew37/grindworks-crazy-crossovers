@@ -13,7 +13,7 @@ func on_item_removed() -> void:
 	Util.get_player().stats.max_hp -= old_bean_amount
 
 func grab_old_bean_amount() -> void:
-	old_bean_amount = floori(Util.get_player().stats.money / 10)
+	old_bean_amount = floori(Util.get_player().stats.money / 5)
 
 func setup() -> void:
 	if not Util.get_player():
@@ -23,12 +23,12 @@ func setup() -> void:
 	first_money_change(player.stats.money)
 
 func first_money_change(money: int) -> void:
-	var money_laff = floori(money / 10)
+	var money_laff = floori(money / 5)
 	Util.get_player().stats.max_hp = Util.get_player().stats.max_hp + money_laff
 	Util.get_player().stats.hp = Util.get_player().stats.hp + money_laff
 
 func on_money_changed(money: int) -> void:
-	var money_laff = floori(money / 10)
+	var money_laff = floori(money / 5)
 	Util.get_player().stats.max_hp -= old_bean_amount
 	Util.get_player().stats.max_hp = Util.get_player().stats.max_hp + money_laff
 	Util.get_player().stats.hp = Util.get_player().stats.hp + money_laff

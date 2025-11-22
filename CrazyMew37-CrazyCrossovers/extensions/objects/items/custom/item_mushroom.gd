@@ -27,7 +27,7 @@ func create_multiplier() -> void:
 	dmg_mult = StatMultiplier.new()
 	dmg_mult.stat = "damage"
 	if player.stats.hp == player.stats.max_hp:
-		dmg_mult.amount = 0.15
+		dmg_mult.amount = 0.2
 	else:
 		dmg_mult.amount = 0.0
 	dmg_mult.additive = true

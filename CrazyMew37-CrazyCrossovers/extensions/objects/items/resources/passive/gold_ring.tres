@@ -13,7 +13,7 @@ qualitoon = 4
 ui_cam_offset = 0.15
 item_name = "Gold Ring"
 item_description = "Your wealth is your health"
-big_description = "Every 10 Jellybeans in your bank gives:
+big_description = "Every 5 Jellybeans in your bank gives:
 + 1 Max Laff"
 model = ExtResource("3_3xgla")
 pickup_sfx = ExtResource("4_0lwnc")

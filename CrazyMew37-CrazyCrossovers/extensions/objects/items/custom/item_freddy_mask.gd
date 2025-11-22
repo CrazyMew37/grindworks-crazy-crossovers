@@ -12,7 +12,6 @@ func use() -> void:
 
 func apply_stat_boost(cog: Cog) -> void:
 	var stat_boost: StatBoost = load('res://objects/battle/battle_resources/status_effects/resources/status_effect_stat_boost.tres').duplicate(true)
-	stat_boost.icon = load('res://ui_assets/battle/statuses/evasiveness.png')
 	stat_boost.rounds = 1
 	stat_boost.stat = 'accuracy'
 	stat_boost.boost = -0.75

@@ -1,12 +1,17 @@
 extends Node
 class_name CCglobal
 
+var drenched_round_boost = 0
+var sound_splash_boost = 0.0
+
 # Save function
 func save_to():
 	var CCSaveData = preload("res://mods-unpacked/CrazyMew37-CrazyCrossovers/CCSaveData.gd")
 	var file_name = "CCcurrent_save.tres"
 	
 	var save_data = CCSaveData.new()
+	save_data.drenched_round_boost = drenched_round_boost
+	save_data.sound_splash_boost = sound_splash_boost
 
 	ResourceSaver.save(save_data, SaveFileService.SAVE_FILE_PATH + file_name)
 	print("crazy crossovers saved to: ", SaveFileService.SAVE_FILE_PATH + file_name)
@@ -17,6 +22,8 @@ func load_save():
 	if FileAccess.file_exists(file_path):
 		var loaded = ResourceLoader.load(file_path)
 		if loaded:
+			drenched_round_boost = loaded.drenched_round_boost
+			sound_splash_boost = loaded.sound_splash_boost
 			print("crazy crossovers save loaded successfully")
 		else:
 			print("Failed to load crazy crossovers save file.")
@@ -35,3 +42,5 @@ func delete_save():
 
 func reset_stats():
 	print("resetting crazy crossovers stats")
+	drenched_round_boost = 0
+	sound_splash_boost = 0.0

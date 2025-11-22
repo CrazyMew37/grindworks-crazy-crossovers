@@ -9,6 +9,7 @@
 [resource]
 script = ExtResource("5_pecvj")
 qualitoon = 3
+world_scale = 0.15
 ui_cam_offset = 0.15
 item_name = "Mushroom"
 item_description = "Being big is being strong!"

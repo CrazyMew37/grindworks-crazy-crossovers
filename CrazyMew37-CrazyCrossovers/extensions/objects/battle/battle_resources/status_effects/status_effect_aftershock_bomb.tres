@@ -11,5 +11,5 @@ rounds = -1
 icon = ExtResource("1_iyj8b")
 icon_scale = 0.9
 description = "Deals %d damage every round"
-status_name = "TNT Blast"
-id = 101
+status_name = "Lit Fuse"
+id = 3701
