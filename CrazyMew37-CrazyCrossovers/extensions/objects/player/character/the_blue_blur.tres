@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=16 format=3 uid="uid://cfyhnblp78603"]
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=17 format=3 uid="uid://cfyhnblp78603"]
 
 [ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="1_vwubq"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="2_sb8s1"]
@@ -10,11 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://dh7dyokcfyw43" path="res://models/toon/textures/clothes/shirts/desat_sleeve_1.png" id="8_4l88j"]
 [ext_resource type="Resource" uid="uid://tyi7ukxtvcgc" path="res://objects/battle/battle_resources/gag_loadouts/loadouts/standard_loadout.tres" id="9_r4nn7"]
 [ext_resource type="Script" uid="uid://ts8xpgftpmty" path="res://objects/player/character.gd" id="10_ni3k6"]
+[ext_resource type="Resource" uid="uid://dr6swjafd4wst" path="res://objects/items/resources/accessories/glasses/goggles.tres" id="11_h4te8"]
 [ext_resource type="Resource" uid="uid://08861uv78r5r" path="res://objects/items/resources/active/goon_foot.tres" id="11_pk1jj"]
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("2_sb8s1")
-defense = 0.9
 speed = 1.5
 
 [sub_resource type="Resource" id="Resource_ugrs1"]
@@ -44,13 +44,13 @@ bottoms = SubResource("Resource_ugrs1")
 script = ExtResource("10_ni3k6")
 character_name = "The Blue Blur"
 character_summary = "Very high speed
-Starts with Goon Foot
+Starts with Goggles and Goon Foot
 Starts with Sound"
 character_blurb = "Rolling around at the speed of sound, the fastest thing alive is here to save poor, kidnapped Toons from the nefarious Cogs!"
 dna = SubResource("Resource_ax4gq")
 gag_loadout = ExtResource("9_r4nn7")
 starting_laff = 30
-starting_items = Array[ExtResource("1_vwubq")]([ExtResource("11_pk1jj")])
+starting_items = Array[ExtResource("1_vwubq")]([ExtResource("11_h4te8"), ExtResource("11_pk1jj")])
 base_stats = SubResource("Resource_jj61k")
 starting_gags = Dictionary[String, int]({
 "Drop": 0,
