@@ -30,3 +30,4 @@ stats_add = {
 }
 icon = ExtResource("1_o0heu")
 shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)
+force_show_shop_category = true

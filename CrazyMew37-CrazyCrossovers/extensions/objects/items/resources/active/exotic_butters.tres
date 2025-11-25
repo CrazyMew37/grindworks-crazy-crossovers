@@ -18,4 +18,5 @@ item_script = ExtResource("2_em2q0")
 icon = ExtResource("1_em2q0")
 shop_category_title = "Exotic Butters"
 shop_category_color = Color(0.9188354, 0.8175375, 0.3719217, 1)
+force_show_shop_category = true
 metadata/_custom_type_script = "uid://5uwfsntxdag6"

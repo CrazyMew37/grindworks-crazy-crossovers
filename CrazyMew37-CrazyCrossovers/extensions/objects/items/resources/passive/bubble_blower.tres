@@ -20,3 +20,4 @@ stats_add = {
 item_script = ExtResource("2_3k16o")
 icon = ExtResource("1_5i7kb")
 shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)
+force_show_shop_category = true

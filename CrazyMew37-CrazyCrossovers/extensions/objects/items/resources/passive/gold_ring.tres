@@ -20,3 +20,4 @@ pickup_sfx = ExtResource("4_0lwnc")
 item_script = ExtResource("2_n87l5")
 icon = ExtResource("1_lm4tk")
 shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)
+force_show_shop_category = true
