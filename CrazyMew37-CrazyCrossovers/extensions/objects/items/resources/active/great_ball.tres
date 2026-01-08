@@ -9,7 +9,7 @@
 [resource]
 script = ExtResource("5_ajqjg")
 active_type = 2
-charge_count = 5
+charge_count = 6
 qualitoon = 2
 rarity = 4
 ui_cam_offset = 0.15

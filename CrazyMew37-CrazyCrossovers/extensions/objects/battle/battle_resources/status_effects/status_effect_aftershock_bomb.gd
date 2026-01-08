@@ -23,6 +23,7 @@ func renew() -> void:
 	kaboom_tween.kill()
 	kaboom.queue_free()
 	if target is Player:
+		target.last_damage_source = "a TNT explosion"
 		await manager.sleep(2.0)
 	else:
 		await manager.sleep(4.0)

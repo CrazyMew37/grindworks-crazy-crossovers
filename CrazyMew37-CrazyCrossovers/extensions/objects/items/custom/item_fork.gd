@@ -25,7 +25,7 @@ func hurt_cog() -> void:
 	var manager := BattleService.ongoing_battle
 	var battle_node := manager.battle_node
 	var targets := manager.current_action.targets
-	var damage: int = manager.current_action.damage
+	var damage: int = ceili(manager.current_action.damage * 1.5 * Util.get_player().stats.damage)
 	
 	manager.show_action_name("Forked!")
 	var cog: Cog = targets[0]

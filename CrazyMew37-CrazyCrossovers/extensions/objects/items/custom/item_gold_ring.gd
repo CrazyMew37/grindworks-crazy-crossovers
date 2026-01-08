@@ -37,5 +37,5 @@ func on_money_changed(money: int) -> void:
 		money_laff = 100
 	Util.get_player().stats.max_hp -= old_bean_amount
 	Util.get_player().stats.max_hp = Util.get_player().stats.max_hp + money_laff
-	Util.get_player().stats.hp = Util.get_player().stats.hp + money_laff
+	Util.get_player().stats.hp = Util.get_player().stats.hp + (money_laff - old_bean_amount)
 	grab_old_bean_amount()

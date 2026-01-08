@@ -62,4 +62,4 @@ func penny_pinching() -> void:
 	
 	attack.targets = [lowest_level_cog]
 	
-	manager.round_end_actions.append(attack)
+	manager.round_actions.push_front(attack)

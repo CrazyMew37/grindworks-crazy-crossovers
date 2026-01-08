@@ -8,7 +8,7 @@ script = ExtResource("2_rduyb")
 quality = 0
 rounds = -1
 icon = ExtResource("1_xt4ut")
-description = "Gains a +20% Defense Boost every time they take damage.
+description = "Gains a +15% Defense Boost every time they take damage.
 Current Defense Boost: +0%"
 status_name = "Toon Out"
 id = 3703

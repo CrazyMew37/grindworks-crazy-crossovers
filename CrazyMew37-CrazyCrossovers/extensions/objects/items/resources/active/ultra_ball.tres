@@ -9,7 +9,7 @@
 [resource]
 script = ExtResource("5_vg8kp")
 active_type = 2
-charge_count = 8
+charge_count = 9
 qualitoon = 3
 rarity = 5
 ui_cam_offset = 0.15

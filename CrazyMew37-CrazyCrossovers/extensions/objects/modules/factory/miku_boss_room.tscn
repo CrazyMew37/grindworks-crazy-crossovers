@@ -622,6 +622,7 @@ override_intro = SubResource("Resource_7ucv0")
 unique_name_in_owner = true
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -2, 0, -3.521)
 level_range_offset = 1
+use_floor_pool = false
 dna = ExtResource("21_ge2t8")
 skelecog_chance = 0
 
@@ -629,6 +630,7 @@ skelecog_chance = 0
 unique_name_in_owner = true
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.49737e-07, 0, -0.66389)
 level_range_offset = 1
+use_floor_pool = false
 dna = ExtResource("19_1t0pg")
 skelecog_chance = 0
 
@@ -636,6 +638,7 @@ skelecog_chance = 0
 unique_name_in_owner = true
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 2, 0, -3.521)
 level_range_offset = 1
+use_floor_pool = false
 dna = ExtResource("19_gbmcu")
 skelecog_chance = 0
 

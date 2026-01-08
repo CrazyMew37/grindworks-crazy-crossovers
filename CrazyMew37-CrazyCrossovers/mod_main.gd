@@ -32,6 +32,7 @@ func install_script_hook_files() -> void:
 	ModLoaderMod.install_script_hooks("res://objects/battle/battle_resources/toon_attacks/gag_squirt.gd", extensions_dir_path.path_join("objects/battle/battle_resources/toon_attacks/gag_squirt.hooks.gd"))
 	ModLoaderMod.install_script_hooks("res://objects/battle/battle_resources/toon_attacks/gag_sound.gd", extensions_dir_path.path_join("objects/battle/battle_resources/toon_attacks/gag_sound.hooks.gd"))
 	ModLoaderMod.install_script_hooks("res://objects/battle/battle_resources/toon_attacks/gag_throw.gd", extensions_dir_path.path_join("objects/battle/battle_resources/toon_attacks/gag_throw.hooks.gd"))
+	ModLoaderMod.install_script_hooks("res://objects/cog/cog.gd", extensions_dir_path.path_join("objects/cog/cog.hooks.gd"))
 
 func add_translations() -> void:
 	translations_dir_path = mod_dir_path.path_join("translations")
@@ -46,6 +47,8 @@ func _ready() -> void:
 	Globals.ADDITIONAL_TOON_PATHS.append("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/player/character/jerry_fitzgerbil.tres")
 	Globals.ADDITIONAL_TOON_PATHS.append("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/player/character/cartooncle.tres")
 	Globals.ADDITIONAL_TOON_PATHS.append("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/player/character/the_blue_blur.tres")
+	Globals.ADDITIONAL_TOON_PATHS.append("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/player/character/orbunon.tres")
+	Globals.ADDITIONAL_TOON_PATHS.append("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/player/character/sailor_moonkey.tres")
 	
 	print("crazy crossovers ACTIVATED!!!!!!!!!!!!!!!")
 
@@ -71,6 +74,16 @@ func _ready() -> void:
 		"red_puyo": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/red_puyo.tres",
 		"yellow_puyo": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/yellow_puyo.tres",
 		"garbage_puyo": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/garbage_puyo.tres",
+		"microgame_cartridge": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/microgame_cartridge.tres",
+		"portrait_of_markov": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/portrait_of_markov.tres",
+		"hot_sauce": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/hot_sauce.tres",
+		"big_root": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/big_root.tres",
+		"garlic_bottle": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/garlic_bottle.tres",
+		"airy_crown": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/airy_crown.tres",
+		"watery_crown": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/watery_crown.tres",
+		"fiery_crown": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/fiery_crown.tres",
+		"earthy_crown": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/earthy_crown.tres",
+		"aethereal_crown": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/aethereal_crown.tres",
 		# Pocket Pranks - cm37
 		"freddy_mask": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/freddy_mask.tres",
 		"chaos_emerald": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/chaos_emerald.tres",
@@ -84,22 +97,29 @@ func _ready() -> void:
 		"potion": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/potion.tres",
 		"super_potion": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/super_potion.tres",
 		"hyper_potion": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/hyper_potion.tres",
+		"pen": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/pen.tres",
+		"candy_bar_bag_carrying_bag": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/candy_bar_bag_carrying_bag.tres",
+		"shovel": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/shovel.tres",
+		"rose": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/rose.tres",
+		"moon_stick": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/moon_stick.tres",
+		"bomb": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/bomb.tres",
+		"spaghetti": "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/active/spaghetti.tres",
 	}
 
 	var pool_memberships := {
-		"stranger_items.tres": ["sun","freddy_mask","chaos_emerald","ultra_ball","master_ball","bubble_blower","electric_guitar","fire_flower","fork","super_star","garbage_puyo",],
-		"special_items.tres": ["sun","gold_ring","egg","chaos_emerald","exotic_butters","master_ball","fork","super_star",],
-		"shop_rewards.tres": ["yoylecake","sodaroni","krabby_patty","exotic_butters","leek","poke_ball","great_ball","fire_flower",],
+		"stranger_items.tres": ["sun","freddy_mask","chaos_emerald","ultra_ball","master_ball","bubble_blower","electric_guitar","fire_flower","fork","super_star","garbage_puyo","microgame_cartridge","shovel","moon_stick","bomb",],
+		"special_items.tres": ["sun","gold_ring","egg","chaos_emerald","exotic_butters","master_ball","fork","super_star","microgame_cartridge","pen",],
+		"shop_rewards.tres": ["yoylecake","sodaroni","krabby_patty","exotic_butters","leek","poke_ball","great_ball","fire_flower","rose","spaghetti","garlic_bottle","airy_crown","watery_crown","fiery_crown","earthy_crown",],
 		"shop_progressives.tres": ["potion","super_potion","hyper_potion",],
-		"rewards.tres": ["yoylecake","sodaroni","freddy_mask","krabby_patty","mushroom","tnt_block","leek","poke_ball","great_ball","ultra_ball","bubble_blower","snowball","never-melt_ice","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","hyper_potion",],
-		"progressives.tres": ["potion","super_potion",],
+		"rewards.tres": ["krabby_patty","great_ball","ultra_ball","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","super_potion","hyper_potion","candy_bar_bag_carrying_bag","shovel","moon_stick","aethereal_crown",],
+		"progressives.tres": ["potion","super_potion","yoylecake","sodaroni","tnt_block","freddy_mask","poke_ball","bubble_blower","snowball","never-melt_ice","mushroom","leek","rose","bomb","spaghetti","portrait_of_markov","hot_sauce","big_root","garlic_bottle","airy_crown","watery_crown","fiery_crown","earthy_crown",],
 		"item_roll_fails.tres": ["potion","super_potion","hyper_potion",],
-		"floor_clears.tres": ["mushroom","egg","electric_guitar","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo",],
-		"everything.tres": ["yoylecake","sodaroni","sun","freddy_mask","krabby_patty","gold_ring","mushroom","egg","tnt_block","chaos_emerald","exotic_butters","leek","poke_ball","great_ball","ultra_ball","master_ball","bubble_blower","snowball","electric_guitar","fire_flower","never-melt_ice","fork","super_star","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo","potion","super_potion","hyper_potion",],
+		"floor_clears.tres": ["mushroom","egg","electric_guitar","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo","portrait_of_markov","hot_sauce","big_root","aethereal_crown",],
+		"everything.tres": ["yoylecake","sodaroni","sun","freddy_mask","krabby_patty","gold_ring","mushroom","egg","tnt_block","chaos_emerald","exotic_butters","leek","poke_ball","great_ball","ultra_ball","master_ball","bubble_blower","snowball","electric_guitar","fire_flower","never-melt_ice","fork","super_star","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo","potion","super_potion","hyper_potion","microgame_cartridge","pen","candy_bar_bag_carrying_bag","shovel","rose","moon_stick","bomb","spaghetti","portrait_of_markov","hot_sauce","big_root","garlic_bottle","airy_crown","watery_crown","fiery_crown","earthy_crown","aethereal_crown",],
 		"doodle_treasure.tres": ["sodaroni","tnt_block","potion","super_potion","hyper_potion",],
 		"battle_clears.tres": ["potion",],
-		"active_items.tres": ["freddy_mask","chaos_emerald","exotic_butters","leek","poke_ball","great_ball","ultra_ball","master_ball","super_star","potion","super_potion","hyper_potion",],
-		"accessories.tres": ["yoylecake","sodaroni","sun","krabby_patty","gold_ring","mushroom","egg","tnt_block","bubble_blower","snowball","electric_guitar","fire_flower","never-melt_ice","fork","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo",],
+		"active_items.tres": ["freddy_mask","chaos_emerald","exotic_butters","leek","poke_ball","great_ball","ultra_ball","master_ball","super_star","potion","super_potion","hyper_potion","pen","candy_bar_bag_carrying_bag","shovel","rose","moon_stick","bomb","spaghetti",],
+		"accessories.tres": ["yoylecake","sodaroni","sun","krabby_patty","gold_ring","mushroom","egg","tnt_block","bubble_blower","snowball","electric_guitar","fire_flower","never-melt_ice","fork","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo","microgame_cartridge","portrait_of_markov","hot_sauce","big_root","garlic_bottle","airy_crown","watery_crown","fiery_crown","earthy_crown","aethereal_crown",],
 	}
 
 	for pool_name in pool_memberships:
@@ -117,6 +137,33 @@ func _ready() -> void:
 				else:
 					push_error("Failed to load item at: %s" % item_path)
 					
+	var anomaly_paths := {
+		"positive": [
+			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_deleting_the_competition.gd",
+		],
+		"neutral": [
+			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_eclipse.gd",
+		],
+		"negative": [
+			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_jellyrings.gd",
+		],
+	}
+	
+	for anomaly in anomaly_paths["positive"]:
+		if anomaly not in FloorVariant.ANOMALIES_POSITIVE:
+			FloorVariant.ANOMALIES_POSITIVE.append(anomaly)
+			print("Added positive anomaly: %s" % anomaly)
+			
+	for anomaly in anomaly_paths["neutral"]:
+		if anomaly not in FloorVariant.ANOMALIES_NEUTRAL:
+			FloorVariant.ANOMALIES_NEUTRAL.append(anomaly)
+			print("Added neutral anomaly: %s" % anomaly)
+			
+	for anomaly in anomaly_paths["negative"]:
+		if anomaly not in FloorVariant.ANOMALIES_NEGATIVE:
+			FloorVariant.ANOMALIES_NEGATIVE.append(anomaly)
+			print("Added negative anomaly: %s" % anomaly)
+			
 	Util.s_floor_started.connect(load_boss_rooms)
 	
 var add_boss_rooms = true
@@ -134,6 +181,16 @@ func load_boss_rooms(_game_floor: GameFloor) -> void:
 		krabs_boss_room.room = "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/modules/mint/mr_krabs_boss.tscn"
 		krabs_boss_room.rarity_weight = 0.5
 		Globals.mint_floor_variant.floor_type.final_rooms.append(krabs_boss_room)
+		
+		var ddlc_boss_room := FacilityRoom.new()
+		ddlc_boss_room.room = "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/modules/office/ddlc_boss.tscn"
+		ddlc_boss_room.rarity_weight = 0.5
+		Globals.da_floor_variant.floor_type.final_rooms.append(ddlc_boss_room)
+		
+		var arle_boss_room := FacilityRoom.new()
+		arle_boss_room.room = "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/modules/cgc/arle_boss.tscn"
+		arle_boss_room.rarity_weight = 0.5
+		Globals.cgc_floor_variant.floor_type.final_rooms.append(arle_boss_room)
 		
 		print("cc boss rooms added")
 		add_boss_rooms = false

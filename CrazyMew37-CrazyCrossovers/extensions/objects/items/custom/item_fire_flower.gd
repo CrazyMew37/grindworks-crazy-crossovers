@@ -1,7 +1,7 @@
 extends ItemScript
 
 var POISON_EFFECT := load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/battle/battle_resources/status_effects/status_effect_scorched.tres")
-const EFFECT_RATIO := 0.2
+const EFFECT_RATIO := 0.33
 
 func setup() -> void:
 	BattleService.s_round_started.connect(on_round_started)
@@ -22,7 +22,7 @@ func apply_poison_effect(cog : Cog, damage : int) -> void:
 	var poison_effect := POISON_EFFECT.duplicate(true)
 	poison_effect.target = cog
 	poison_effect.amount = damage
-	poison_effect.rounds = 3
+	poison_effect.rounds = 2
 	poison_effect.icon = load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/fireflower.png")
 	BattleService.ongoing_battle.add_status_effect(poison_effect)
 	print("applied scorched!")
