@@ -1,7 +1,7 @@
 extends ItemScript
 
 var POISON_EFFECT := load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/battle/battle_resources/status_effects/status_effect_scorched.tres")
-const EFFECT_RATIO := 0.33
+const EFFECT_RATIO := 0.35
 
 func setup() -> void:
 	BattleService.s_round_started.connect(on_round_started)

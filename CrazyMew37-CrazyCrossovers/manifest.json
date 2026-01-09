@@ -8,8 +8,8 @@
 				"alder"
 			],
 			"compatible_game_version": [
-				"1.2.4",
-				"1.2.5"
+				"1.2.5",
+				"1.2.6"
 			],
 			"compatible_mod_loader_version": [
 				"7.0.0"
@@ -27,6 +27,6 @@
 	},
 	"name": "CrazyCrossovers",
 	"namespace": "CrazyMew37",
-	"version_number": "0.3.0",
+	"version_number": "0.3.1",
 	"website_url": ""
 }
