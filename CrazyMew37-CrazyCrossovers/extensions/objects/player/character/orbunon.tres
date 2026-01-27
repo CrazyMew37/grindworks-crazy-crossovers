@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=18 format=3 uid="uid://be2wbsv0mlehx"]
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=19 format=3 uid="uid://be2wbsv0mlehx"]
 
 [ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="1_ex4qr"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="2_4le4g"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://dj6rnwbpaogue" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/microgame_cartridge_orbulon.tres" id="11_ex4qr"]
 [ext_resource type="Resource" uid="uid://ru0peyelcrcv" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/goggles_orbulon.tres" id="13_4le4g"]
 [ext_resource type="Resource" uid="uid://djij80h8jh7yd" path="res://objects/items/resources/accessories/glasses/star_glasses.tres" id="13_pb3xg"]
+[ext_resource type="Resource" uid="uid://b2kdn7jbtxq00" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/orbunon_setup.tres" id="14_4le4g"]
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("2_4le4g")
@@ -50,7 +51,7 @@ character_blurb = "This alien Toon is here to conquer the world and play some wa
 dna = SubResource("Resource_ax4gq")
 gag_loadout = ExtResource("9_rjm02")
 starting_laff = 36
-starting_items = Array[ExtResource("1_ex4qr")]([ExtResource("11_ex4qr"), ExtResource("13_pb3xg"), ExtResource("13_4le4g")])
+starting_items = Array[ExtResource("1_ex4qr")]([ExtResource("11_ex4qr"), ExtResource("13_pb3xg"), ExtResource("13_4le4g"), ExtResource("14_4le4g")])
 base_stats = SubResource("Resource_jj61k")
 starting_gags = Dictionary[String, int]({
 "Drop": 1,

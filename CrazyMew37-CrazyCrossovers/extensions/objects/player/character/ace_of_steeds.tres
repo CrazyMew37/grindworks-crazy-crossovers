@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=20 format=3 uid="uid://ce0lbh7307qur"]
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=21 format=3 uid="uid://ce0lbh7307qur"]
 
 [ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="1_tewxq"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="2_jw0he"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://dtiunkopfpn5q" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/ace_of_diamonds_steeds.tres" id="13_4176d"]
 [ext_resource type="Resource" uid="uid://88ijlwrsrxlx" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/ace_of_clubs_steeds.tres" id="14_7kixl"]
 [ext_resource type="Resource" uid="uid://ca25j75xttg4p" path="res://objects/items/resources/active/moneybags_coin.tres" id="15_dbjbu"]
+[ext_resource type="Resource" uid="uid://ybouw2arm3uf" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/ace_of_steeds_setup.tres" id="16_jw0he"]
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("2_jw0he")
@@ -56,7 +57,7 @@ character_blurb = "An anxious, yet vigilant mage who is determined to stop the c
 dna = SubResource("Resource_ax4gq")
 gag_loadout = ExtResource("9_0m6am")
 starting_laff = 30
-starting_items = Array[ExtResource("1_tewxq")]([ExtResource("11_tewxq"), ExtResource("12_jw0he"), ExtResource("13_4176d"), ExtResource("14_7kixl"), ExtResource("15_dbjbu")])
+starting_items = Array[ExtResource("1_tewxq")]([ExtResource("11_tewxq"), ExtResource("12_jw0he"), ExtResource("13_4176d"), ExtResource("14_7kixl"), ExtResource("15_dbjbu"), ExtResource("16_jw0he")])
 base_stats = SubResource("Resource_jj61k")
 starting_gags = Dictionary[String, int]({
 "Drop": 1,

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=21 format=3 uid="uid://b2ubrdij8yx6x"]
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=22 format=3 uid="uid://b2ubrdij8yx6x"]
 
 [ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="1_n4t8l"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="2_ft2c1"]
@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://b50vvmod5h2w3" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/yellow_puyo.tres" id="14_k55jf"]
 [ext_resource type="Resource" uid="uid://ce8nlg2w08wef" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/purple_puyo.tres" id="15_gscmr"]
 [ext_resource type="Resource" uid="uid://b0ghw33kag844" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/garbage_puyo_carbuncle.tres" id="16_me2bp"]
+[ext_resource type="Resource" uid="uid://cc0q87e8ts4x6" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/cartooncle_setup.tres" id="17_l5hor"]
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("2_ft2c1")
@@ -58,7 +59,7 @@ character_blurb = "A rabbit with a bottomless appetite for curry. He heard this 
 dna = SubResource("Resource_ax4gq")
 gag_loadout = ExtResource("9_gscmr")
 starting_laff = 30
-starting_items = Array[ExtResource("1_n4t8l")]([ExtResource("11_me2bp"), ExtResource("12_l5hor"), ExtResource("13_p0yxs"), ExtResource("14_k55jf"), ExtResource("15_gscmr"), ExtResource("16_me2bp")])
+starting_items = Array[ExtResource("1_n4t8l")]([ExtResource("11_me2bp"), ExtResource("12_l5hor"), ExtResource("13_p0yxs"), ExtResource("14_k55jf"), ExtResource("15_gscmr"), ExtResource("16_me2bp"), ExtResource("17_l5hor")])
 base_stats = SubResource("Resource_jj61k")
 starting_gags = Dictionary[String, int]({
 "Drop": 1,

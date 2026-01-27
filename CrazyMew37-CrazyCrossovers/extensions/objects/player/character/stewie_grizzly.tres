@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=16 format=3 uid="uid://dt14r60muljg4"]
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=17 format=3 uid="uid://dt14r60muljg4"]
 
 [ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="1_63mt3"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="2_i6yfm"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://tyi7ukxtvcgc" path="res://objects/battle/battle_resources/gag_loadouts/loadouts/standard_loadout.tres" id="9_sgbsg"]
 [ext_resource type="Script" uid="uid://ts8xpgftpmty" path="res://objects/player/character.gd" id="10_pel3m"]
 [ext_resource type="Resource" uid="uid://bfnda2fv7vvvt" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/rupert_stewie.tres" id="11_26a6p"]
+[ext_resource type="Resource" uid="uid://cypsuc26s0i4t" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/stewie_grizzly_setup.tres" id="12_q7l2e"]
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("2_i6yfm")
@@ -51,7 +52,7 @@ character_blurb = "This evil baby cub is planning on making his Mom go sad. But 
 dna = SubResource("Resource_ax4gq")
 gag_loadout = ExtResource("9_sgbsg")
 starting_laff = 30
-starting_items = Array[ExtResource("1_63mt3")]([ExtResource("11_26a6p")])
+starting_items = Array[ExtResource("1_63mt3")]([ExtResource("11_26a6p"), ExtResource("12_q7l2e")])
 base_stats = SubResource("Resource_jj61k")
 starting_gags = Dictionary[String, int]({
 "Drop": 0,
