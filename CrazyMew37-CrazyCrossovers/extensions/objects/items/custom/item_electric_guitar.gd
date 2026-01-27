@@ -1,5 +1,7 @@
 extends ItemScript
 
+var SettingsConfig = ModLoaderConfig.get_config("CrazyMew37-CrazyCrossovers", "crossoversettings")
+var EndlessNerfsSetting = SettingsConfig.data["endlessnerfs"]
 var player: Player
 var cc : Node = null
 
@@ -22,7 +24,10 @@ func on_item_removed() -> void:
 	cc.sound_splash_boost -= 0.2
 
 func setup(_item: Item) -> void:
-	cc.sound_splash_boost += 0.2
+	if EndlessNerfsSetting == 0:
+		cc.sound_splash_boost = min(cc.sound_splash_boost + 0.2, 0.5)
+	else:
+		cc.sound_splash_boost += 0.2
 	if not Util.get_player():
 		await Util.s_player_assigned
 	player = Util.get_player()

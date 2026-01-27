@@ -15,7 +15,16 @@
 				"7.0.0"
 			],
 			"config_schema": {
-
+				"description": "Settings for Crazy Crossovers",
+				"properties": {
+					"endlessnerfs": {
+						"default": 0.0,
+						"title": "Option to nerf some items for Endless Mod",
+						"type": "number"
+					}
+				},
+				"title": "Config",
+				"type": "object"
 			},
 			"description_rich": "",
 			"image": null,
@@ -27,6 +36,6 @@
 	},
 	"name": "CrazyCrossovers",
 	"namespace": "CrazyMew37",
-	"version_number": "0.3.1",
+	"version_number": "1.0.0",
 	"website_url": ""
 }

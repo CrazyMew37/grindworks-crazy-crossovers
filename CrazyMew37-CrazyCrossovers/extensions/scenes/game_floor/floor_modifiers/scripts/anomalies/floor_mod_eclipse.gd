@@ -1,12 +1,14 @@
 extends FloorModifier
 
-const NERF_AMT_PLAYER := -0.25
+var NERF_AMT_PLAYER := -0.25
 const NERF_AMT_COGS := -0.25
 
 var status_effect: StatBoost:
 	get: return GameLoader.load("res://objects/battle/battle_resources/status_effects/resources/status_effect_stat_boost.tres").duplicate(true)
 
 func modify_floor() -> void:
+	if Util.floor_number > 5:
+		NERF_AMT_PLAYER = -0.25 * floor(1 + ((Util.floor_number - 1) / 10))
 	var player := Util.get_player()
 	player.stats.damage += NERF_AMT_PLAYER
 	game_floor.s_cog_spawned.connect(on_cog_spawned)
@@ -38,4 +40,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/smeclipse.png")
 
 func get_description() -> String:
-	return "Everyone receives -25% Damage"
+	return "Everyone receives -25% Damage (Your damage down increases every ten floors with Endless)"

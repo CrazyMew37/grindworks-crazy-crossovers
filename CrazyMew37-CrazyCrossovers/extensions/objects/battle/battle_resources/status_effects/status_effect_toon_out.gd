@@ -1,7 +1,7 @@
 @tool
 extends StatusEffect
 
-var defense_boost := 0.15
+var defense_boost := 0.1
 var defense_total := 0.0
 
 func apply() -> void:
@@ -11,7 +11,7 @@ func apply() -> void:
 
 func on_battle_start() -> void:
 	if Util.on_easy_floor():
-		defense_boost = 0.075
+		defense_boost = 0.05
 	on_round_end()
 
 func on_hp_changed(hp: int) -> void:
@@ -23,4 +23,4 @@ func on_hp_changed(hp: int) -> void:
 
 func on_round_end() -> void:
 	var defense_total_rounded = (snapped(defense_total, 0.001) * 100)
-	description = "Gains a +{0}% Defense Boost every time they take damage.\nCurrent Defense Boost: +{1}%".format(["7.5" if Util.on_easy_floor() else "15", defense_total_rounded])
+	description = "Gains a +{0}% Defense Boost every time they take damage.\nCurrent Defense Boost: +{1}%".format(["5" if Util.on_easy_floor() else "10", defense_total_rounded])

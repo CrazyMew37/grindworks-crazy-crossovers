@@ -21,7 +21,6 @@ big_description = "Heals 45 laff. (one-time-use)"
 model = ExtResource("3_pwy1f")
 pickup_sfx = ExtResource("4_mqqpn")
 item_script = ExtResource("2_dwqi3")
-remember_item = false
 icon = ExtResource("1_dwqi3")
 shop_category_title = "Pocket Prank"
 shop_category_color = Color(0.929412, 0.262745, 0.278431, 1)

@@ -1,9 +1,12 @@
 @tool
 extends StatusEffect
 
-var turns_added := 1
+var turns_added := 2
 
 func apply() -> void:
+	if Util.on_easy_floor():
+		turns_added = 1
+	target.stats.turns = turns_added
 	description = "Gains +1 move at the end of {0} round.\nCurrent extra round count: {1}".format(["every odd" if Util.on_easy_floor() else "every", (turns_added - 1)])
 	manager.s_round_ended.connect(on_round_end)
 

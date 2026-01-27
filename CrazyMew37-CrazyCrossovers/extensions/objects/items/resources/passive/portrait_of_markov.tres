@@ -9,7 +9,7 @@ script = ExtResource("4_lybe4")
 qualitoon = 1
 ui_cam_offset = 0.15
 item_name = "Portrait of Markov"
-item_description = "An interesting read."
+item_description = "An interesting read"
 big_description = "+ 25% Defense
 - 10% Evasiveness
 - 5% Damage"

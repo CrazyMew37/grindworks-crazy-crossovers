@@ -1,6 +1,6 @@
 extends FloorModifier
 
-const ATTACK_AMOUNT := 0.01
+var ATTACK_AMOUNT := 0.01
 var TOTAL_ATK := 0.00
 const EARN_SFX := preload("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/s_kill_glitch1.ogg")
 
@@ -15,6 +15,8 @@ func battle_participant_dying(participant: Node3D) -> void:
 	if participant is Cog and Util.get_player():
 		if not BattleService.cog_gives_credit(participant):
 			return
+		if Util.floor_number > 5:
+			ATTACK_AMOUNT = 0.01 * floor(1 + ((Util.floor_number - 1) / 10))
 		Util.get_player().stats.damage += ATTACK_AMOUNT
 		TOTAL_ATK += ATTACK_AMOUNT
 		AudioManager.play_sound(EARN_SFX)
@@ -33,4 +35,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/deletingthecompetition.png")
 
 func get_description() -> String:
-	return "Every defeated cog will give you +1% Attack for the floor!"
+	return "Every defeated cog will give you +1% Attack for the floor! (Stat increase goes up every ten floors with Endless)"

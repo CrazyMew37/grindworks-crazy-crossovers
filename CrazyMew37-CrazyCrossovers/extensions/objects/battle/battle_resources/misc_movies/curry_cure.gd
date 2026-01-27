@@ -15,7 +15,9 @@ const SFX_PAPER_HIT := preload("res://audio/sfx/misc/MG_sfx_travel_game_no_bonus
 var response_lines: Array[String] = [
 	"Mmm! Deeee-licious!",
 	"Since when did you start sharing, Carby?",
-	"Nothing beats a good bowl of curry!"
+	"Nothing beats a good bowl of curry!",
+	"Now I can properly enjoy this battle!",
+	"A little soon for a victory feast, ay, Carby?"
 ]
 
 func action() -> void:

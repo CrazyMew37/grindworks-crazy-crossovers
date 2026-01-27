@@ -13,9 +13,9 @@ qualitoon = 3
 rarity = 5
 ui_cam_offset = 0.15
 item_name = "Sun"
-item_description = "Greater power for greater costs."
-big_description = "- Increases point regeneration of all Gag tracks by 1
-- Increases the point costs of gags by 1"
+item_description = "Greater power for greater costs"
+big_description = "Increases point regeneration of all Gag tracks by 1
+Increases the point costs of gags by 1"
 model = ExtResource("2_anq14")
 pickup_sfx = ExtResource("3_anq14")
 stats_add = {

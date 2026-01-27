@@ -12,7 +12,8 @@ qualitoon = 2
 ui_cam_offset = 0.15
 item_name = "Electric Guitar"
 item_description = "Make some loud music!"
-big_description = "+ 20% Sound splash damage"
+big_description = "+ 20% Sound splash damage
+(Sound splash damage caps at 100% of sound's base damage with Endless Nerfs on)"
 model = ExtResource("3_4nqfo")
 pickup_sfx = ExtResource("4_axwun")
 item_script = ExtResource("2_axwun")

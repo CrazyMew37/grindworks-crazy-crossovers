@@ -15,5 +15,3 @@ func getCC() -> void:
 	var tree := Engine.get_main_loop() as SceneTree
 	var root := tree.get_root()
 	cc = root.get_node_or_null("/root/ModLoader/CrazyMew37-CrazyCrossovers/CCglobal")
-	if cc:
-		print("cc test, ", cc.drenched_round_boost)

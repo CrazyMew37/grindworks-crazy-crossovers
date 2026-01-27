@@ -14,14 +14,6 @@ var required_tracks: Track
 var ban_effects: Array[StatusEffect] = []
 var expires_this_round := false
 var gag_used := false
-var TrackDictionary := {
-	"Squirt": GagSquirt,
-	"Trap": GagTrap,
-	"Lure": GagLure,
-	"Sound": GagSound,
-	"Throw": GagThrow,
-	"Drop": GagDrop,
-}
 
 func apply() -> void:
 	trimmed_list = track_list.duplicate(true)
@@ -40,14 +32,19 @@ func cleanup() -> void:
 
 func require_random_track(_manager: BattleManager) -> void:
 	if manager.cogs.size() > 0:
-		var new_track = trimmed_list.pick_random()
+		var loadout := Util.get_player().stats.character.gag_loadout
+		var new_track = loadout.loadout.pick_random()
 		required_tracks = new_track
 		var new_effect := make_banned_effect(new_track.gags)
 		manager.add_status_effect(new_effect)
 		ban_effects.clear()
 		ban_effects.append(new_effect)
-		Util.get_player().boost_queue.queue_text("Use {0}!".format([required_tracks.track_name]), Color(1.0, 0.833, 0.0, 1.0))
+		Util.get_player().boost_queue.queue_text("Use {0}!".format([required_tracks.track_name]), required_tracks.track_color)
 		AudioManager.play_sound(load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/microgame_intro.ogg"))
+		await manager.sleep(0.01)
+		BattleService.ongoing_battle.battle_ui.reset()
+		BattleService.ongoing_battle.battle_ui.cog_panels.reset(0)
+		BattleService.ongoing_battle.battle_ui.cog_panels.assign_cogs(BattleService.ongoing_battle.cogs)
 
 
 func make_banned_effect(gags: Array[ToonAttack]) -> StatusEffect:
@@ -72,30 +69,16 @@ func on_round_started(actions: Array[BattleAction]) -> void:
 			return
 		if effect.is_banned_gag_used(actions) and gag_used == false:
 			for action in actions:
-				match required_tracks.track_name:
-					"Squirt":
-						if action is GagSquirt and gag_used == false:
-							increase_damage(action)
-					"Trap":
-						if action is GagTrap and gag_used == false:
-							increase_damage(action)
-					"Lure":
-						if action is GagLure and gag_used == false:
-							increase_damage(action)
-					"Sound":
-						if action is GagSound and gag_used == false:
-							increase_damage(action)
-					"Throw":
-						if action is GagThrow and gag_used == false:
-							increase_damage(action)
-					"Drop":
-						if action is GagDrop and gag_used == false:
-							increase_damage(action)
+				for gag in required_tracks.gags:
+					if gag.action_name == action.action_name and gag_used == false:
+						increase_damage(action)
 				print("Gag{0}".format([required_tracks.track_name]))
 
 func increase_damage(action: BattleAction) -> void:
 	AudioManager.play_sound(load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/wariowin.ogg"))
 	action.damage *= 2.0
+	if action is GagLure:
+		action.lure_effect.knockback_effect *= 2.0
 	Util.get_player().boost_queue.queue_text("Good job!", Color(0.567, 0.85, 0.0, 1.0))
 	gag_used = true
 

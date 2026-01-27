@@ -9,7 +9,7 @@ script = ExtResource("3_q6pfk")
 qualitoon = 1
 ui_cam_offset = 0.15
 item_name = "Watery Crown"
-item_description = "Smooth sailing."
+item_description = "Smooth sailing"
 big_description = "+ 8% Luck
 - 4% Speed"
 model = ExtResource("2_e2fd1")

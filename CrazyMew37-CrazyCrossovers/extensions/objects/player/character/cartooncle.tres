@@ -15,7 +15,7 @@
 [ext_resource type="Resource" uid="uid://dgt6w10xuv3em" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/green_puyo.tres" id="13_p0yxs"]
 [ext_resource type="Resource" uid="uid://b50vvmod5h2w3" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/yellow_puyo.tres" id="14_k55jf"]
 [ext_resource type="Resource" uid="uid://ce8nlg2w08wef" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/purple_puyo.tres" id="15_gscmr"]
-[ext_resource type="Resource" uid="uid://clv700dle0gxo" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/garbage_puyo.tres" id="16_yfvkm"]
+[ext_resource type="Resource" uid="uid://b0ghw33kag844" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/garbage_puyo_carbuncle.tres" id="16_me2bp"]
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("2_ft2c1")
@@ -51,14 +51,14 @@ bottoms = SubResource("Resource_ugrs1")
 script = ExtResource("10_yfvkm")
 character_name = "Cartooncle"
 character_summary = "Starts with Red, Yellow, Green, Blue, and Purple Puyo
-Starts with Garbage Puyo
+Starts with an untradeable Garbage Puyo
 Only starts with Drop
 Crits are weak, but increases thanks to Yellow Puyo"
 character_blurb = "A rabbit with a bottomless appetite for curry. He heard this building is serving some for today's lunch special."
 dna = SubResource("Resource_ax4gq")
 gag_loadout = ExtResource("9_gscmr")
 starting_laff = 30
-starting_items = Array[ExtResource("1_n4t8l")]([ExtResource("11_me2bp"), ExtResource("12_l5hor"), ExtResource("13_p0yxs"), ExtResource("14_k55jf"), ExtResource("15_gscmr"), ExtResource("16_yfvkm")])
+starting_items = Array[ExtResource("1_n4t8l")]([ExtResource("11_me2bp"), ExtResource("12_l5hor"), ExtResource("13_p0yxs"), ExtResource("14_k55jf"), ExtResource("15_gscmr"), ExtResource("16_me2bp")])
 base_stats = SubResource("Resource_jj61k")
 starting_gags = Dictionary[String, int]({
 "Drop": 1,

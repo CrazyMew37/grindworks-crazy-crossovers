@@ -25,7 +25,7 @@ attacks = Array[ExtResource("1_c546w")]([ExtResource("2_fuw0w"), ExtResource("4_
 level_high = 20
 baked_status_effects = PackedStringArray("res://objects/battle/battle_resources/status_effects/resources/attentive.tres", "res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/battle/battle_resources/status_effects/status_effect_toon_out.tres")
 is_admin = true
-health_mod = 1.5
+health_mod = 2.5
 battle_phrases = Array[String](["Miku Miku Miiii~", "I won't be hiding in your wifi anymore.", "You'll be mesmerized by my song!"])
 external_assets = {
 &"head_model": "",
