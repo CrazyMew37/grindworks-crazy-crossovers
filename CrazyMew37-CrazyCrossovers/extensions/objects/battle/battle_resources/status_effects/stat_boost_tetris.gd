@@ -18,7 +18,7 @@ var tetris_block: int = 7
 
 func apply():
 	# Applies a random Tetromino. 1: T/Toon-Up, 2: Z/Squirt, 3: O/Trap, 4: S/Lure, 5: J/Sound, 6: L/Throw, 6: I/Drop
-	tetris_block = randi_range(1,1)
+	tetris_block = randi_range(1,7)
 	if tetris_block == 1:
 		stat = 'Toon-Up'
 		BattleService.ongoing_battle.battle_stats[Util.get_player()].toonup_boost += boost
