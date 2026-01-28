@@ -35,6 +35,8 @@ func install_script_hook_files() -> void:
 	ModLoaderMod.install_script_hooks("res://objects/battle/battle_resources/toon_attacks/gag_throw.gd", extensions_dir_path.path_join("objects/battle/battle_resources/toon_attacks/gag_throw.hooks.gd"))
 	ModLoaderMod.install_script_hooks("res://objects/cog/cog.gd", extensions_dir_path.path_join("objects/cog/cog.hooks.gd"))
 	ModLoaderMod.install_script_hooks("res://objects/battle/battle_resources/toon_attacks/gag_drop.gd", extensions_dir_path.path_join("objects/battle/battle_resources/toon_attacks/gag_drop.hooks.gd"))
+	ModLoaderMod.install_script_hooks("res://objects/battle/battle_resources/toon_attacks/toonup.gd", extensions_dir_path.path_join("objects/battle/battle_resources/toon_attacks/toonup.hooks.gd"))
+	ModLoaderMod.install_script_hooks("res://objects/battle/battle_ui/item_panel.gd", extensions_dir_path.path_join("objects/battle/battle_ui/item_panel.hooks.gd"))
 
 func add_translations() -> void:
 	translations_dir_path = mod_dir_path.path_join("translations")

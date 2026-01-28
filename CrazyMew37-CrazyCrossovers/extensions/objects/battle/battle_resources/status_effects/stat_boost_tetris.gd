@@ -14,14 +14,14 @@ var ICONS := {
 
 @export var stat: String = 'Drop'
 @export var boost: float = 0.2
-var tetris_block: int = 2
+var tetris_block: int = 7
 
 func apply():
 	# Applies a random Tetromino. 1: T/Toon-Up, 2: Z/Squirt, 3: O/Trap, 4: S/Lure, 5: J/Sound, 6: L/Throw, 6: I/Drop
-	tetris_block = randi_range(1,7)
+	tetris_block = randi_range(1,1)
 	if tetris_block == 1:
 		stat = 'Toon-Up'
-		Util.get_player().stats.toonup_boost += boost
+		BattleService.ongoing_battle.battle_stats[Util.get_player()].toonup_boost += boost
 	elif tetris_block == 2:
 		stat = 'Squirt'
 	elif tetris_block == 3:
@@ -39,7 +39,7 @@ func apply():
 	
 func expire():
 	if tetris_block == 1:
-		Util.get_player().stats.toonup_boost -= boost
+		BattleService.ongoing_battle.battle_stats[Util.get_player()].toonup_boost -= boost
 	else:
 		if stat in Util.get_player().stats.gag_effectiveness:
 			BattleService.ongoing_battle.battle_stats[Util.get_player()].gag_effectiveness[stat] -= boost
