@@ -13,11 +13,11 @@ var ICONS := {
 }
 
 @export var stat: String = 'Drop'
-@export var boost: float = 0.25
+@export var boost: float = 0.2
 var tetris_block: int = 1
 
 func apply():
-	# Applies a random Tetromino. 1: T/Toon-Up, 2: S/Squirt, 3: O/Trap, 4: S/Lure, 5: J/Sound, 6: L/Throw, 6: I/Drop
+	# Applies a random Tetromino. 1: T/Toon-Up, 2: Z/Squirt, 3: O/Trap, 4: S/Lure, 5: J/Sound, 6: L/Throw, 6: I/Drop
 	tetris_block = randi_range(1,7)
 	if tetris_block == 1:
 		stat = 'Toon-Up'
