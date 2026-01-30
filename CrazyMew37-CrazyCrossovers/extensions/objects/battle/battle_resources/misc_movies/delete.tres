@@ -10,3 +10,4 @@ summary = "Monika deletes this cog for her own gain!"
 attack_lines = Array[String](["Ahahahaha...", "Remember, Toon, Just Monika.", "You were just lines of code, anyway.", "You're getting in my way.", "Sorry, but you leave me no choice."])
 target_type = 3
 action_name = "Delete"
+action_tags = Array[int]([0])

@@ -10,3 +10,4 @@ ignore_stats = true
 summary = "Burns you for every cog in the fight!"
 attack_lines = Array[String](["I prefer my Toons well done.", "They don't call me the King of the Koopas for nothing!", "Get roasted by my awesone flame breath!", "I'll take care of you just like that nefarious Mario!", "Get burned this double whammy Aw YEAH!"])
 action_name = "Bowser Broil"
+action_tags = Array[int]([0])

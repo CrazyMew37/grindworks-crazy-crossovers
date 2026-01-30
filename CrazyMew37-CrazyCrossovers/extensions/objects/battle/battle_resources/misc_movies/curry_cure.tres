@@ -10,3 +10,4 @@ summary = "Applies a 15% health regen to every cog!"
 attack_lines = Array[String](["Gu gu gu!", "Mmm, gu guu!", "Gu gu... Guuuu!"])
 target_type = 3
 action_name = "Curry Cure"
+action_tags = Array[int]([0])

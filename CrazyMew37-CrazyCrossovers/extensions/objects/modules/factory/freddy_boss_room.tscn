@@ -116,7 +116,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.75)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, 0, 5.75)
 
-[node name="ThirdPos" type="Node3D" parent="PlayerPositions" index="2"]
+[node name="LookLeft" type="Node3D" parent="PlayerPositions" index="2"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3, 0, 5.73)
+
+[node name="LookRight" type="Node3D" parent="PlayerPositions" index="3"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3, 0, 5.77)
+
+[node name="ThirdPos" type="Node3D" parent="PlayerPositions" index="4"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5.75)
 
@@ -140,13 +148,13 @@ transform = Transform3D(-9.261263e-07, -3.1991797e-06, -9.3564, 0, 21.1873, -1.4
 transform = Transform3D(-9.2612197e-07, -3.19917e-06, -9.3564, 0, 21.1872, -1.4127734e-06, 21.1872, -1.3984017e-13, -4.089812e-07, 26.691, 3.64776, -92.1446)
 
 [node name="Gear_001" parent="factory_gear_room_building" index="3"]
-transform = Transform3D(99.90303, -0.00041053983, 0.06187121, 0, 100.019, 0.17213206, -0.12134693, -0.33799103, 50.9376, 26.9519, 17.9899, -59.4227)
+transform = Transform3D(99.90303, -0.00041053956, 0.061871167, 0, 100.019, 0.17213206, -0.121346846, -0.33799103, 50.9376, 26.9519, 17.9899, -59.4227)
 
 [node name="Gear_002" parent="factory_gear_room_building" index="4"]
 transform = Transform3D(99.90303, -0.00041053892, 0.06399244, 0, 100.019, 0.17803602, -0.12134595, -0.337993, 52.6844, 27.297, 5.35306, -65.8303)
 
 [node name="Gear_003" parent="factory_gear_room_building" index="5"]
-transform = Transform3D(44.859505, -0.00018434822, 0.06187082, 0, 44.9127, 0.17213127, -0.05448823, -0.15177166, 50.9375, 26.9518, 17.9915, -62.2211)
+transform = Transform3D(44.859505, -0.00018434819, 0.06187081, 0, 44.9127, 0.17213127, -0.054488223, -0.15177166, 50.9375, 26.9518, 17.9915, -62.2211)
 
 [node name="Gear_004" parent="factory_gear_room_building" index="6"]
 transform = Transform3D(0.1213998, 0.337993, -52.6844, 0, 100.019, 0.17803602, 99.90303, -0.00041072114, 0.064020835, 43.5414, 22.1571, -84.4386)

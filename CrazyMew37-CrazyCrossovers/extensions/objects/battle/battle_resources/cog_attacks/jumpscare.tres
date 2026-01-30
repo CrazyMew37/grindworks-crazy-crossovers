@@ -9,3 +9,4 @@ damage = 5
 summary = "You didn't keep this cog in check!"
 attack_lines = Array[String](["BOOOO!!!", "RAAAAAAH!!!", "GAAAAAAH!!!"])
 action_name = "Jumpscare"
+action_tags = Array[int]([0])

@@ -24,7 +24,7 @@ func on_round_ended() -> void:
 
 func call_reinforcements() -> void:
 	# Call Reinforcements: Whenever Ash is alone
-	if manager.cogs.size() == 1:
+	if manager.cogs.size() == 1 and target:
 		var action := REINFORCEMENTS.duplicate(true)
 		action.user = target
 		action.cog_amount = 2
@@ -34,7 +34,7 @@ func call_reinforcements() -> void:
 func on_participants_changed(_p) -> void:
 	# people are gonna see that this is aftershock in disguise if you use drop :( -cm37
 	# also bessie may totally cheese ash -cm37
-	if manager.cogs.size() > 0:
+	if manager.cogs.size() > 0 and target:
 		var damage_effect := AFTERSHOCK_EFFECT.duplicate(true)
 		damage_effect.rounds = 0
 		damage_effect.target = target
@@ -42,5 +42,5 @@ func on_participants_changed(_p) -> void:
 			damage_effect.amount = ceili(target.stats.max_hp / 4)
 		else:
 			damage_effect.amount = ceili(target.stats.max_hp / 6)
-		manager.add_status_effect(damage_effect)
+			manager.add_status_effect(damage_effect)
 		call_reinforcements()
