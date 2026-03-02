@@ -42,6 +42,8 @@ func action(chain: ModLoaderHookChain):
 		
 		if not immune:
 			var throw_damage: int = chain.reference_object.manager.affect_target(cog, chain.reference_object.damage)
+			if chain.reference_object.status_effect:
+				chain.reference_object.apply_status_effect()
 			if chain.reference_object.user.throw_heals:
 				chain.reference_object.user.quick_heal(roundi(throw_damage * chain.reference_object.user.stats.get_stat("throw_heal_boost")))
 			chain.reference_object.s_hit.emit()
