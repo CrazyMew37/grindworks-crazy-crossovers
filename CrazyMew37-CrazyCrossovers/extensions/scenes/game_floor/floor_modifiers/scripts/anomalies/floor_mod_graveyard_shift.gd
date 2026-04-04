@@ -9,7 +9,7 @@ func modify_floor() -> void:
 func on_battle_start(_battle: BattleManager) -> void:
 	var stat_increase := 0.15
 	if Util.floor_number > 5:
-		stat_increase = 0.15 * floor(1 + ((Util.floor_number - 1) / 10))
+		stat_increase = 0.15 * (1 + (floor((Util.floor_number - 1) / 5) * 0.5))
 	var player := Util.get_player()
 	var effect: StatusEffect = STAT_BOOST.duplicate(true)
 	effect.quality = StatusEffect.EffectQuality.NEGATIVE
@@ -41,8 +41,8 @@ func apply_effect() -> void:
 	var stat_increase := 0.15
 	var stat_adjustment := 0.06
 	if Util.floor_number > 5:
-		stat_increase = 0.15 * floor(1 + ((Util.floor_number - 1) / 10))
-		stat_adjustment = 0.06 * floor(1 + ((Util.floor_number - 1) / 10))
+		stat_increase = 0.15 * (1 + (floor((Util.floor_number - 1) / 5) * 0.5))
+		stat_adjustment = 0.06 * (1 + (floor((Util.floor_number - 1) / 5) * 0.5))
 	var player := Util.get_player()
 	if BattleService.ongoing_battle.current_round < 5:
 			var effect: StatusEffect = STAT_BOOST.duplicate(true)
@@ -88,7 +88,7 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/graveyardshift.png")
 
 func get_description() -> String:
-	return "Begin with -15% Damage and +15% Defense during a battle, which progressively shifts to +15% Damage and -15% Defense over a few rounds (Effects are multiplied every 10 floors with Endless)"
+	return "Begin with -15% Damage and +15% Defense during a battle, which progressively shifts to +15% Damage and -15% Defense over a few rounds (Effects are multiplied by +0.5x every 5 floors with Endless)"
 
 func get_mod_quality() -> ModType:
 	return ModType.NEUTRAL
