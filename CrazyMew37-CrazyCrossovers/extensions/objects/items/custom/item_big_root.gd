@@ -10,10 +10,10 @@ func on_collect(_item: Item, _object: Node3D) -> void:
 func setup() -> void:
 	var player := Util.get_player()
 	if EndlessNerfsSetting == 0:
-		player.stats.throw_heal_boost = min(player.stats.throw_heal_boost + 0.05, 0.25)
+		player.stats.throw_heal_boost = min(player.stats.throw_heal_boost + 0.1, 0.35)
 	else:
-		player.stats.throw_heal_boost += 0.05
+		player.stats.throw_heal_boost += 0.1
 
 func on_item_removed() -> void:
 	var player := Util.get_player()
-	player.stats.throw_heal_boost -= 0.05
+	player.stats.throw_heal_boost -= 0.1
