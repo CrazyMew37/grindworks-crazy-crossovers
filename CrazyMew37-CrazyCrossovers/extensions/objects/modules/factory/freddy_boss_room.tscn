@@ -1,14 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://b3iuacjyngblx"]
+[gd_scene format=3 uid="uid://b3iuacjyngblx"]
 
 [ext_resource type="PackedScene" uid="uid://7dgrh0jdr7k5" path="res://objects/modules/factory/base_rooms/factory_gear_room.tscn" id="1_6yyaw"]
 [ext_resource type="PackedScene" uid="uid://direah3lbjuu5" path="res://objects/battle/battle_node/battle_node.tscn" id="2_8p4kh"]
-[ext_resource type="Script" uid="uid://calp5p1fddjnm" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/modules/factory/freddy_boss_directory.gd" id="2_qfuir"]
-[ext_resource type="AudioStream" uid="uid://dv5g45solosne" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/music/freddy_boss_theme.ogg" id="3_8p4kh"]
-[ext_resource type="Script" uid="uid://475ao8t005o6" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/battle/battle_resources/misc_movies/freddy_intro_movie.gd" id="4_8p4kh"]
+[ext_resource type="Script" uid="uid://calp5p1fddjnm" path="res://other-mods/CrazyMew37-CrazyCrossovers/extensions/objects/modules/factory/freddy_boss_directory.gd" id="2_qfuir"]
+[ext_resource type="AudioStream" uid="uid://dv5g45solosne" path="res://other-mods/CrazyMew37-CrazyCrossovers/extensions/audio/music/freddy_boss_theme.ogg" id="3_8p4kh"]
+[ext_resource type="Script" uid="uid://475ao8t005o6" path="res://other-mods/CrazyMew37-CrazyCrossovers/extensions/objects/battle/battle_resources/misc_movies/freddy_intro_movie.gd" id="4_8p4kh"]
 [ext_resource type="PackedScene" uid="uid://dflwjcy6fj0av" path="res://objects/cog/cog.tscn" id="5_q7ysk"]
-[ext_resource type="Resource" uid="uid://bgti1yakdfugx" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/cog/presets/bonnie.tres" id="6_8p4kh"]
-[ext_resource type="Resource" uid="uid://bfqh8met74m3h" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/cog/presets/freddy_fazbear.tres" id="7_qfuir"]
-[ext_resource type="Resource" uid="uid://ck4i04kqoety2" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/cog/presets/chica.tres" id="8_5o81w"]
+[ext_resource type="Resource" uid="uid://bgti1yakdfugx" path="res://other-mods/CrazyMew37-CrazyCrossovers/extensions/objects/cog/presets/bonnie.tres" id="6_8p4kh"]
+[ext_resource type="Resource" uid="uid://bfqh8met74m3h" path="res://other-mods/CrazyMew37-CrazyCrossovers/extensions/objects/cog/presets/freddy_fazbear.tres" id="7_qfuir"]
+[ext_resource type="Resource" uid="uid://ck4i04kqoety2" path="res://other-mods/CrazyMew37-CrazyCrossovers/extensions/objects/cog/presets/chica.tres" id="8_5o81w"]
 [ext_resource type="PackedScene" uid="uid://dxyq5lb5oineo" path="res://objects/interactables/treasure_chest/treasure_chest.tscn" id="8_8feoe"]
 [ext_resource type="PackedScene" uid="uid://y6ineseqnb3c" path="res://objects/props/mint/boiler_a1.tscn" id="9_7wd1q"]
 [ext_resource type="PackedScene" uid="uid://b6eexfh4v078o" path="res://objects/interactables/elevators/sellbot_elevator.tscn" id="10_0vnti"]
@@ -22,7 +22,7 @@ metadata/_custom_type_script = "uid://475ao8t005o6"
 [sub_resource type="BoxShape3D" id="BoxShape3D_cciol"]
 size = Vector3(13.6508, 9.2716675, 9.002675)
 
-[node name="FactoryGearRoom" instance=ExtResource("1_6yyaw")]
+[node name="FactoryGearRoom" unique_id=1604411452 instance=ExtResource("1_6yyaw")]
 
 [node name="Prop_Rotate_Y_5_Gear1" parent="Model/ZONE07/gear_center/props3/GearsAll" index="26"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 147.743, 504.12, 243.775)
@@ -54,87 +54,87 @@ transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 224.057, 381.
 [node name="Prop_Rotate_Y_N10_Gear11" parent="Model/ZONE07/gear_center/props3/GearsAll" index="35"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 531.32, 398.652, 125.569)
 
-[node name="BossDirectory" type="Node3D" parent="." index="5"]
+[node name="BossDirectory" type="Node3D" parent="." index="5" unique_id=1962272208]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 36.4116, 1.51747, -76.4503)
 script = ExtResource("2_qfuir")
 
-[node name="BattleNode" parent="BossDirectory" index="0" node_paths=PackedStringArray("cogs", "focus_cog") instance=ExtResource("2_8p4kh")]
+[node name="BattleNode" parent="BossDirectory" index="0" unique_id=567966154 node_paths=PackedStringArray("cogs", "focus_cog") instance=ExtResource("2_8p4kh")]
 unique_name_in_owner = true
 tags = Array[int]([0, 2])
 cogs = [NodePath("Bonnie"), NodePath("Freddy"), NodePath("Chica")]
 focus_cog = NodePath("Freddy")
 override_intro = SubResource("Resource_qfuir")
 
-[node name="Bonnie" parent="BossDirectory/BattleNode" index="3" instance=ExtResource("5_q7ysk")]
+[node name="Bonnie" parent="BossDirectory/BattleNode" index="3" unique_id=1953929372 instance=ExtResource("5_q7ysk")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -10, 0)
 level_range_offset = -2
 dna = ExtResource("6_8p4kh")
 skelecog_chance = 0
 
-[node name="Freddy" parent="BossDirectory/BattleNode" index="4" instance=ExtResource("5_q7ysk")]
+[node name="Freddy" parent="BossDirectory/BattleNode" index="4" unique_id=100650870 instance=ExtResource("5_q7ysk")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 level_range_offset = -2
 dna = ExtResource("7_qfuir")
 skelecog_chance = 0
 
-[node name="Chica" parent="BossDirectory/BattleNode" index="5" instance=ExtResource("5_q7ysk")]
+[node name="Chica" parent="BossDirectory/BattleNode" index="5" unique_id=1983657582 instance=ExtResource("5_q7ysk")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -10, 0)
 level_range_offset = -2
 dna = ExtResource("8_5o81w")
 skelecog_chance = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BossDirectory/BattleNode" index="6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossDirectory/BattleNode" index="6" unique_id=1001009847]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5992737, 4.659329, -0.27428818)
 shape = SubResource("BoxShape3D_cciol")
 
-[node name="CogPositions" type="Node3D" parent="." index="6"]
+[node name="CogPositions" type="Node3D" parent="." index="6" unique_id=254907682]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.288, 1.516, -81.628)
 
-[node name="FreddyPos" type="Node3D" parent="CogPositions" index="0"]
+[node name="FreddyPos" type="Node3D" parent="CogPositions" index="0" unique_id=1945588517]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 5.75)
 
-[node name="BonniePos" type="Node3D" parent="CogPositions" index="1"]
+[node name="BonniePos" type="Node3D" parent="CogPositions" index="1" unique_id=596568638]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 4.25)
 
-[node name="ChicaPos" type="Node3D" parent="CogPositions" index="2"]
+[node name="ChicaPos" type="Node3D" parent="CogPositions" index="2" unique_id=1228008290]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 7.25)
 
-[node name="PlayerPositions" type="Node3D" parent="." index="7"]
+[node name="PlayerPositions" type="Node3D" parent="." index="7" unique_id=396073685]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.28837, 1.51557, -81.6283)
 
-[node name="FirstPos" type="Node3D" parent="PlayerPositions" index="0"]
+[node name="FirstPos" type="Node3D" parent="PlayerPositions" index="0" unique_id=889102940]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.75)
 
-[node name="SecondPos" type="Node3D" parent="PlayerPositions" index="1"]
+[node name="SecondPos" type="Node3D" parent="PlayerPositions" index="1" unique_id=396764069]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, 0, 5.75)
 
-[node name="LookLeft" type="Node3D" parent="PlayerPositions" index="2"]
+[node name="LookLeft" type="Node3D" parent="PlayerPositions" index="2" unique_id=1650959978]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3, 0, 5.73)
 
-[node name="LookRight" type="Node3D" parent="PlayerPositions" index="3"]
+[node name="LookRight" type="Node3D" parent="PlayerPositions" index="3" unique_id=615217221]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3, 0, 5.77)
 
-[node name="ThirdPos" type="Node3D" parent="PlayerPositions" index="4"]
+[node name="ThirdPos" type="Node3D" parent="PlayerPositions" index="4" unique_id=503837030]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5.75)
 
-[node name="treasure_chest" parent="." index="8" instance=ExtResource("8_8feoe")]
+[node name="treasure_chest" parent="." index="8" unique_id=1014152134 instance=ExtResource("8_8feoe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.5908, 1.51557, -81.6283)
 
-[node name="boiler_a1" parent="." index="9" instance=ExtResource("9_7wd1q")]
+[node name="boiler_a1" parent="." index="9" unique_id=735998547 instance=ExtResource("9_7wd1q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.2919, 1.61621, -81.4268)
 
-[node name="sellbot_elevator" parent="." index="10" instance=ExtResource("10_0vnti")]
+[node name="sellbot_elevator" parent="." index="10" unique_id=267013757 instance=ExtResource("10_0vnti")]
 transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 48.4668, 4.5995, -96.192)
 floor_count = 5
 sync_to_floor = true
@@ -148,29 +148,29 @@ transform = Transform3D(-9.261263e-07, -3.1991797e-06, -9.3564, 0, 21.1873, -1.4
 transform = Transform3D(-9.2612197e-07, -3.19917e-06, -9.3564, 0, 21.1872, -1.4127734e-06, 21.1872, -1.3984017e-13, -4.089812e-07, 26.691, 3.64776, -92.1446)
 
 [node name="Gear_001" parent="factory_gear_room_building" index="3"]
-transform = Transform3D(99.90303, -0.00041053956, 0.061871167, 0, 100.019, 0.17213206, -0.121346846, -0.33799103, 50.9376, 26.9519, 17.9899, -59.4227)
+transform = Transform3D(99.90303, -0.0004105395, 0.06187116, 0, 100.019, 0.17213206, -0.12134683, -0.33799103, 50.9376, 26.9519, 17.9899, -59.4227)
 
 [node name="Gear_002" parent="factory_gear_room_building" index="4"]
 transform = Transform3D(99.90303, -0.00041053892, 0.06399244, 0, 100.019, 0.17803602, -0.12134595, -0.337993, 52.6844, 27.297, 5.35306, -65.8303)
 
 [node name="Gear_003" parent="factory_gear_room_building" index="5"]
-transform = Transform3D(44.859505, -0.00018434819, 0.06187081, 0, 44.9127, 0.17213127, -0.054488223, -0.15177166, 50.9375, 26.9518, 17.9915, -62.2211)
+transform = Transform3D(44.859505, -0.00018434817, 0.061870802, 0, 44.9127, 0.17213127, -0.054488216, -0.15177166, 50.9375, 26.9518, 17.9915, -62.2211)
 
 [node name="Gear_004" parent="factory_gear_room_building" index="6"]
 transform = Transform3D(0.1213998, 0.337993, -52.6844, 0, 100.019, 0.17803602, 99.90303, -0.00041072114, 0.064020835, 43.5414, 22.1571, -84.4386)
 
-[node name="SPAWNPOINT" type="Node3D" parent="." index="16"]
+[node name="SPAWNPOINT" type="Node3D" parent="." index="16" unique_id=124700805]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.989845, 1.7175975, -76.77566)
 
-[node name="FirstCam" type="Camera3D" parent="." index="17"]
+[node name="FirstCam" type="Camera3D" parent="." index="17" unique_id=1011230537]
 unique_name_in_owner = true
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 32, 4, -72)
 
-[node name="SecondCam" type="Camera3D" parent="." index="18"]
+[node name="SecondCam" type="Camera3D" parent="." index="18" unique_id=2119957075]
 unique_name_in_owner = true
 transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 40, 3, -74)
 
-[node name="ThirdCam" type="Camera3D" parent="." index="19"]
+[node name="ThirdCam" type="Camera3D" parent="." index="19" unique_id=92806320]
 unique_name_in_owner = true
 transform = Transform3D(-0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659259, 0, -0.25881907, 46, 4, -78)
 

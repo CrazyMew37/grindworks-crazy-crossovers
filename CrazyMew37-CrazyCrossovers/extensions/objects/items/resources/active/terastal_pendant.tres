@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemActive" load_steps=6 format=3 uid="uid://dxr15kuk7cqlr"]
+[gd_resource type="Resource" script_class="ItemActive" format=3 uid="uid://dxr15kuk7cqlr"]
 
 [ext_resource type="Texture2D" uid="uid://d2fu8ix2j7uhp" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/terastalpendant.png" id="1_nvk0p"]
 [ext_resource type="Script" uid="uid://b631d5ay2xu3p" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_terastal_pendant.gd" id="2_nvk0p"]
@@ -11,7 +11,7 @@ script = ExtResource("5_7uy7d")
 active_type = 2
 charge_count = 5
 current_charge = 5
-qualitoon = 4
+qualitoon = 3
 ui_cam_offset = 0.15
 item_name = "Terastal Pendant"
 item_description = "Watch out for any explorers..."

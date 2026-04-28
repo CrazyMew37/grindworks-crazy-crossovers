@@ -19,7 +19,7 @@ func on_battle_start(manager: BattleManager) -> void:
 	on_round_end(manager)
 
 func on_round_end(_manager: BattleManager) -> void:
-	var boost_amount := randi_range(65,135) * 0.01
+	var boost_amount := randi_range(101,121) * 0.01
 	var stat_boost := STAT_BOOST_REFERENCE.duplicate(true)
 	stat_boost.stat = "luck"
 	stat_boost.boost = boost_amount

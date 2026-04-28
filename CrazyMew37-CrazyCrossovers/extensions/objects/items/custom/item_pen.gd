@@ -12,12 +12,10 @@ func use() -> void:
 	if not is_instance_valid(game_floor) or not is_instance_valid(player):
 		return
 		
-	var anomaly_count = game_floor.anomalies.size()
-	
 	for anomaly in game_floor.anomalies.duplicate(true):
 		game_floor.remove_anomaly(anomaly)
 		Util.get_player().boost_queue.queue_text("Removed %s" % anomaly.get_mod_name(), anomaly.text_color)
-	try_add_anomaly(game_floor, anomaly_count)
+	try_add_anomaly(game_floor, (RNG.channel(RNG.ChannelFloorMods).randi_range(0,3) + Util.get_player().stats.anomaly_boost))
 
 func try_add_anomaly(game_floor: GameFloor, anomaly_count: int) -> void:
 	game_floor.spawn_new_anomalies(anomaly_count)

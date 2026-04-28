@@ -147,14 +147,14 @@ func _ready() -> void:
 	}
 
 	var pool_memberships := {
-		"stranger_items.tres": ["sun","freddy_mask","chaos_emerald","ultra_ball","master_ball","electric_guitar","fire_flower","fork","super_star","garbage_puyo","microgame_cartridge","shovel","moon_stick","bomb","keyblade","tetrominoes","ace_of_spades","ace_of_hearts","ace_of_diamonds","ace_of_clubs","mr_cupcake","15_pip_die","rupert",],
+		"stranger_items.tres": ["sun","freddy_mask","chaos_emerald","ultra_ball","master_ball","electric_guitar","fire_flower","fork","super_star","garbage_puyo","microgame_cartridge","shovel","moon_stick","bomb","keyblade","tetrominoes","mr_cupcake","15_pip_die","rupert",],
 		"special_items.tres": ["sun","gold_ring","egg","chaos_emerald","exotic_butters","master_ball","fork","super_star","microgame_cartridge","pen","keyblade","terastal_pendant","mr_cupcake","emerald","15_pip_die",],
 		"shop_rewards.tres": ["yoylecake","sodaroni","krabby_patty","exotic_butters","leek","poke_ball","great_ball","fire_flower","rose","spaghetti","garlic_bottle","airy_crown","watery_crown","fiery_crown","earthy_crown","krusty_doll","sling_scope","donut","river_crystals","kelp_shake","popsicle",],
 		"shop_progressives.tres": ["potion","super_potion","hyper_potion",],
-		"rewards.tres": ["krabby_patty","great_ball","ultra_ball","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","super_potion","hyper_potion","candy_bar_bag_carrying_bag","shovel","moon_stick","aethereal_crown","ace_of_spades","ace_of_hearts","ace_of_diamonds","ace_of_clubs","pacifier","spatula","three-eyed_fish","bubble_blower","kendama","sling_scope","ham","emerald",],
+		"rewards.tres": ["krabby_patty","great_ball","ultra_ball","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","super_potion","hyper_potion","candy_bar_bag_carrying_bag","shovel","moon_stick","aethereal_crown","ace_of_spades","ace_of_hearts","ace_of_diamonds","ace_of_clubs","pacifier","spatula","three-eyed_fish","bubble_blower","kendama","sling_scope","ham","emerald","pen",],
 		"progressives.tres": ["potion","super_potion","yoylecake","sodaroni","tnt_block","freddy_mask","poke_ball","snowball","never-melt_ice","mushroom","leek","rose","bomb","spaghetti","portrait_of_markov","hot_sauce","big_root","garlic_bottle","airy_crown","watery_crown","fiery_crown","earthy_crown","transformation_brooch","krusty_doll","pacifier","apple","donut","cat_cupcake","slingshot","river_crystals","kelp_shake","popsicle",],
 		"item_roll_fails.tres": ["potion","super_potion","hyper_potion",],
-		"floor_clears.tres": ["mushroom","egg","electric_guitar","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo","portrait_of_markov","hot_sauce","big_root","aethereal_crown","tetrominoes","spatula","three-eyed_fish","bubble_blower","kendama","slingshot","rupert",],
+		"floor_clears.tres": ["mushroom","egg","electric_guitar","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo","portrait_of_markov","hot_sauce","big_root","aethereal_crown","tetrominoes","spatula","three-eyed_fish","bubble_blower","kendama","slingshot","rupert","ace_of_spades","ace_of_hearts","ace_of_diamonds","ace_of_clubs",],
 		"everything.tres": ["yoylecake","sodaroni","sun","freddy_mask","krabby_patty","gold_ring","mushroom","egg","tnt_block","chaos_emerald","exotic_butters","leek","poke_ball","great_ball","ultra_ball","master_ball","bubble_blower","snowball","electric_guitar","fire_flower","never-melt_ice","fork","super_star","green_puyo","blue_puyo","purple_puyo","red_puyo","yellow_puyo","garbage_puyo","potion","super_potion","hyper_potion","microgame_cartridge","pen","candy_bar_bag_carrying_bag","shovel","rose","moon_stick","bomb","spaghetti","portrait_of_markov","hot_sauce","big_root","garlic_bottle","airy_crown","watery_crown","fiery_crown","earthy_crown","aethereal_crown","keyblade","transformation_brooch","tetrominoes","krusty_doll","ace_of_spades","ace_of_hearts","ace_of_diamonds","ace_of_clubs","terastal_pendant","pacifier","rupert","spatula","three-eyed_fish","apple","kendama","mr_cupcake","sling_scope","ham","emerald","donut","cat_cupcake","slingshot","river_crystals","15_pip_die","kelp_shake","popsicle",],
 		"doodle_treasure.tres": ["sodaroni","tnt_block","potion","super_potion","hyper_potion","emerald","slingshot",],
 		"battle_clears.tres": ["potion",],
@@ -183,18 +183,21 @@ func _ready() -> void:
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_shiny_chests.gd",
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_steamroll.gd",
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_triple_mushroom.gd",
+			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_mighty_crits.gd",
 		],
 		"neutral": [
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_eclipse.gd",
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_elemental_enigma.gd",
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_cutaway_gags.gd",
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_graveyard_shift.gd",
+			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_nuclear_radiation.gd",
 		],
 		"negative": [
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_jellyrings.gd",
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_cloudy_day.gd",
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_cog_chaining.gd",
 			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_krabby_patty_sale.gd",
+			"res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_yoyle_metal.gd",
 		],
 	}
 	
