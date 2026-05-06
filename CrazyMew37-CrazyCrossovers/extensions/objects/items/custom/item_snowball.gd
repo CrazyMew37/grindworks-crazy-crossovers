@@ -6,7 +6,7 @@ func setup() -> void:
 func on_round_start(actions: Array[BattleAction]) -> void:
 	for action in actions.duplicate(true):
 		if action is ToonAttack:
-			if randf() < Util.get_relevant_player_stats().get_luck_weighted_chance(0.05, 0.15, 2.0):
+			if randf() < Util.get_relevant_player_stats().get_luck_weighted_chance(0.04, 0.08, 2.0):
 				for cogaction in actions.duplicate(true):
 					if cogaction is CogAttack and cogaction.user in action.targets:
 						AudioManager.play_sound(load('res://audio/sfx/battle/cogs/attacks/SA_buzz_word.ogg'))

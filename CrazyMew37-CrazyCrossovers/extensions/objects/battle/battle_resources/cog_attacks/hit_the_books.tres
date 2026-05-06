@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c1b3yowqrw87s"]
+[gd_resource type="Resource" format=3 uid="uid://c1b3yowqrw87s"]
 
 [ext_resource type="PackedScene" uid="uid://chehnymhm3svv" path="res://models/props/facility_objects/da_office/law_book/lawbook.tscn" id="1_en45x"]
 

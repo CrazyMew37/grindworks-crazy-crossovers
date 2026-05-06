@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=17 format=3 uid="uid://xmkhgq3rkawk"]
+[gd_resource type="Resource" script_class="PlayerCharacter" format=3 uid="uid://xmkhgq3rkawk"]
 
 [ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="1_jcvt3"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="3_n0tye"]
@@ -15,10 +15,10 @@
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("3_n0tye")
-damage = 0.65
-defense = 0.7
-evasiveness = 0.7
-speed = 0.85
+damage = 0.75
+defense = 0.8
+evasiveness = 0.8
+speed = 0.95
 
 [sub_resource type="Resource" id="Resource_ugrs1"]
 script = ExtResource("4_oisp8")
@@ -49,7 +49,7 @@ bottoms = SubResource("Resource_ugrs1")
 script = ExtResource("11_4wqun")
 character_name = "Quacksane Teto"
 character_summary = "Starts with both Dragon Wings and Jellybean Jar
-Stats begin very low to compensate"
+Stats begin low to compensate"
 character_blurb = "An upcoming idol who dreams of becoming a star. Has an insatiable hunger for bread and is more
 chimera than Toon."
 dna = SubResource("Resource_ax4gq")
@@ -66,5 +66,5 @@ starting_gags = Dictionary[String, int]({
 "Trap": 0
 })
 additional_stats = Dictionary[String, Variant]({
-"luck": 0.65
+"luck": 0.75
 })
