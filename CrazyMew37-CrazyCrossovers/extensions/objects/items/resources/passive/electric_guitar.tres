@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://b5u2qkfra0aka"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b5u2qkfra0aka"]
 
 [ext_resource type="Texture2D" uid="uid://dksip0lrnrjhq" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/electricguitar.png" id="1_axwun"]
 [ext_resource type="Script" uid="uid://btd43gtlj5wn0" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_electric_guitar.gd" id="2_axwun"]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://cywpwyp3oe75v"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cywpwyp3oe75v"]
 
 [ext_resource type="Texture2D" uid="uid://be0qkwsyw8mdc" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/forkbfdi.png" id="1_ro3t7"]
 [ext_resource type="Script" uid="uid://dai0s7sise7i7" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_fork.gd" id="2_ro3t7"]

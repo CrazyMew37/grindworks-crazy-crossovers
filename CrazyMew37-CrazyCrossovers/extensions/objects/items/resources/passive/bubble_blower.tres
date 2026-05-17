@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://dnxdoobxj7dcy"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dnxdoobxj7dcy"]
 
 [ext_resource type="Texture2D" uid="uid://c8l1uttglq705" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/bubbleblower.png" id="1_5i7kb"]
 [ext_resource type="Script" uid="uid://c116xxcwuphvs" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_bubble_blower.gd" id="2_3k16o"]

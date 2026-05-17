@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://b0bdk86umu8ct"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b0bdk86umu8ct"]
 
 [ext_resource type="Texture2D" uid="uid://cpru2oemnny5p" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/appleringo.png" id="1_xt5wf"]
 [ext_resource type="Script" uid="uid://b1sd8cmcaiueh" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_apple.gd" id="2_xt5wf"]

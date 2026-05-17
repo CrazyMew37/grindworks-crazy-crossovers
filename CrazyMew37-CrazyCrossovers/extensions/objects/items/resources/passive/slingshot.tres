@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://wof601gcn0uf"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://wof601gcn0uf"]
 
 [ext_resource type="Texture2D" uid="uid://dxt8n11pew13c" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/slingshot.png" id="1_e7bsw"]
 [ext_resource type="PackedScene" uid="uid://cqur5id0568qb" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/slingshot.tscn" id="2_e7bsw"]

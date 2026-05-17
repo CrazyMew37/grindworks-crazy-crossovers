@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bd8fyvhh7syp5"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bd8fyvhh7syp5"]
 
 [ext_resource type="Texture2D" uid="uid://bl31jb0cg30y0" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/airycrown.png" id="1_mhcfq"]
 [ext_resource type="PackedScene" uid="uid://b7rb0m80ig8li" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/airy_crown.tscn" id="2_ablq8"]

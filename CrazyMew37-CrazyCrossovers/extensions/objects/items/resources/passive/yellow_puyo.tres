@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://b50vvmod5h2w3"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b50vvmod5h2w3"]
 
 [ext_resource type="Texture2D" uid="uid://dpjrgjlrryo42" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/yellowpuyo.png" id="1_o6ibi"]
 [ext_resource type="Script" uid="uid://c77v12uvmw8nl" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_yellow_puyo.gd" id="2_o6ibi"]

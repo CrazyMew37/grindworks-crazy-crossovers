@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bl1vp1gpv8goo"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bl1vp1gpv8goo"]
 
 [ext_resource type="Texture2D" uid="uid://ch5680pe2wvdc" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/aetherealcrown.png" id="1_wmaew"]
 [ext_resource type="PackedScene" uid="uid://bwwt72ib0htnf" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/aethereal_crown.tscn" id="2_q1rse"]
