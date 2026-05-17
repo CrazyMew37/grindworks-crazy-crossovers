@@ -133,7 +133,7 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/shinychests.png")
 
 func get_description() -> String:
-	return "Bronze Chests have a 15% chance to upgrade into Silver Chests, Silver Chests have a 10% chance to upgrade into Gold Chests, and Gold Chests have a 5% chance to upgrade into Special Chests"
+	return "Bronze Chests have a 15% chance to turn Silver, Silver Chests have a 10% chance to turn Gold, and Gold Chests have a 5% chance to turn Special"
 
 func get_mod_quality() -> ModType:
 	return ModType.POSITIVE
