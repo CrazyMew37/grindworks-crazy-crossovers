@@ -21,4 +21,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/mightycrits.png")
 
 func get_description() -> String:
-	return "Crit Mult is boosted by +50% for the floor! (Increases by +25% ever five floors with Endless)"
+	return "Crit Mult is boosted by +50% for the floor! (Increases by +25% every 5 floors)"

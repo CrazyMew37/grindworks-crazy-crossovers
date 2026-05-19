@@ -19,7 +19,10 @@ func create_debuff() -> void:
 	var effect := DEFENSE_DOWN_EFFECT.duplicate(true)
 	effect.quality = StatusEffect.EffectQuality.NEGATIVE
 	effect.rounds = -1
-	effect.boost = -0.25
+	if Util.floor_number > 5:
+		effect.boost = (-0.25 * (0.5 + (ceilf(Util.floor_number / 5) * 0.5)))
+	else:
+		effect.boost = -0.25
 	effect.stat = 'defense'
 	effect.target = target
 	manager.add_status_effect(effect)

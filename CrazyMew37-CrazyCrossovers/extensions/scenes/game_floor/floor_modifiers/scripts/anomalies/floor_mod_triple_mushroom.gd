@@ -20,4 +20,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/triplemushroom.png")
 
 func get_description() -> String:
-	return "+30% Speed for the floor (Increases by +15% every five floors with Endless)"
+	return "+30% Speed for the floor (Increases by +15% every 5 floors with Endless)"

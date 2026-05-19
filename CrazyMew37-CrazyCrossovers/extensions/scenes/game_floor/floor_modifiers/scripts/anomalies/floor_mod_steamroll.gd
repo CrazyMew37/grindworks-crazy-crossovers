@@ -23,4 +23,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/steamroll.png")
 
 func get_description() -> String:
-	return "Every cleared battle will earn you +1% Speed (Stat increase goes up by +0.5% every five floors with Endless)"
+	return "Every cleared battle will earn you +1% Speed (Stat increase goes up by +0.5% every 5 floors)"

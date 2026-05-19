@@ -40,4 +40,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/smeclipse.png")
 
 func get_description() -> String:
-	return "Everyone receives -25% Damage (Your damage goes down by an extra -12.5% every five floors)"
+	return "Everyone receives -25% Damage (Your damage goes down by an extra -12.5% every 5 floors)"

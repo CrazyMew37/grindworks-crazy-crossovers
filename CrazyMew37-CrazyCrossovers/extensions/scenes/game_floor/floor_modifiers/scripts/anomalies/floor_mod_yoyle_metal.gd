@@ -30,4 +30,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/yoylemetal.png")
 
 func get_description() -> String:
-	return "0.9x Speed and 0.8x Evasiveness for the Floor."
+	return "0.9x Speed and 0.8x Evasiveness for the floor."

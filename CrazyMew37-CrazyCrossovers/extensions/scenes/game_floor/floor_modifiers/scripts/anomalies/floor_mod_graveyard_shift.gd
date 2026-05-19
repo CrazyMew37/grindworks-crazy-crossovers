@@ -88,7 +88,7 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/graveyardshift.png")
 
 func get_description() -> String:
-	return "Begin with -15% Damage and +15% Defense during a battle, which progressively shifts to +15% Damage and -15% Defense over a few rounds (Effects are multiplied by +0.5x every 5 floors with Endless)"
+	return "Begin with -15% damage and +15% defense in-battle. The boosts will swap over a few rounds. (Effects go up by 0.5x every 5 floors)"
 
 func get_mod_quality() -> ModType:
 	return ModType.NEUTRAL

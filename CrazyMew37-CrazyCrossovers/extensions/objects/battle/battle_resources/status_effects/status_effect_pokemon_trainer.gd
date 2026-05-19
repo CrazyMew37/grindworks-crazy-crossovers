@@ -39,8 +39,8 @@ func on_participants_changed(_p) -> void:
 		damage_effect.rounds = 0
 		damage_effect.target = target
 		if Util.on_easy_floor():
-			damage_effect.amount = ceili(target.stats.max_hp / 4)
+			damage_effect.amount = ceilf(target.stats.max_hp / 4.0)
 		else:
-			damage_effect.amount = ceili(target.stats.max_hp / 6)
+			damage_effect.amount = ceilf(target.stats.max_hp / 6.0)
 			manager.add_status_effect(damage_effect)
 		call_reinforcements()

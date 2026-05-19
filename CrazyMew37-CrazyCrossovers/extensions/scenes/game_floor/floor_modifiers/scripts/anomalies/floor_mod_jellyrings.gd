@@ -30,4 +30,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/jellyrings.png")
 
 func get_description() -> String:
-	return "Lose 1 jellybean every time you take damage. (Jellybeans lost increases every five floors with Endless)"
+	return "Lose 1 jellybean every time you take damage. (Jellybeans lost increases every 5 floors)"

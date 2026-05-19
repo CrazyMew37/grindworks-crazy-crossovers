@@ -74,5 +74,5 @@ func increase_damage(action: BattleAction) -> void:
 	gag_used = true
 
 func get_description() -> String:
-	var desc := "Not using {0} will result in -25% Defense.".format([required_tracks.track_name])
+	var desc := "Not using {0} will result in decreased Defense.".format([required_tracks.track_name])
 	return desc

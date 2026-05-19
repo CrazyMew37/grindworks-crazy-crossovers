@@ -35,4 +35,4 @@ func get_mod_icon() -> Texture2D:
 	return load("res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pause/deletingthecompetition.png")
 
 func get_description() -> String:
-	return "Every defeated cog will give you +1% Attack for the floor! (Stat increase goes up by +0.5% every five floors with Endless)"
+	return "Every defeated cog will give you +1% Damage for the floor! (Stat increase goes up by +0.5% every 5 floors)"
