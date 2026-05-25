@@ -15,10 +15,9 @@
 
 [sub_resource type="Resource" id="Resource_jj61k"]
 script = ExtResource("3_n0tye")
-damage = 0.75
-defense = 0.8
-evasiveness = 0.8
-speed = 0.95
+damage = 0.8
+defense = 0.85
+evasiveness = 0.85
 
 [sub_resource type="Resource" id="Resource_ugrs1"]
 script = ExtResource("4_oisp8")
@@ -62,9 +61,9 @@ starting_gags = Dictionary[String, int]({
 "Lure": 0,
 "Sound": 1,
 "Squirt": 0,
-"Throw": 0,
+"Throw": 1,
 "Trap": 0
 })
 additional_stats = Dictionary[String, Variant]({
-"luck": 0.75
+"luck": 0.8
 })
