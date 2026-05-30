@@ -1,9 +1,35 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b2kdn7jbtxq00"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3 uid="uid://0j77bqrm2tbm"]
 
 [ext_resource type="Script" uid="uid://hro1uhttr5e5" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/item_orbunon_setup.gd" id="1_3e187"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="2_ii0e8"]
+[ext_resource type="Script" uid="uid://fb0tqfojo57q" path="res://objects/items/classes/accessory_placement.gd" id="1_5gnt7"]
+[ext_resource type="Script" uid="uid://duxq3xtgnln43" path="res://objects/items/classes/body_placement.gd" id="2_dplvy"]
+[ext_resource type="PackedScene" uid="uid://c8otl0aciwtbn" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/models/accessories/vampire_cape_orbunon.tscn" id="4_5gnt7"]
+[ext_resource type="Script" uid="uid://dvu24b3o8i3sj" path="res://objects/items/classes/item_accessory.gd" id="5_744wj"]
+
+[sub_resource type="Resource" id="Resource_ryjws"]
+script = ExtResource("2_dplvy")
+position = Vector3(0, 1.15, 0.35)
+rotation = Vector3(0, 180, 0)
+scale = Vector3(0.55, 0.45, 0.5)
+
+[sub_resource type="Resource" id="Resource_2cphq"]
+script = ExtResource("2_dplvy")
+body_type = 1
+position = Vector3(0, 1.15, 0.15)
+rotation = Vector3(0, 180, 0)
+scale = Vector3(0.45, 0.45, 0.5)
+
+[sub_resource type="Resource" id="Resource_mw3is"]
+script = ExtResource("2_dplvy")
+body_type = 2
+position = Vector3(0, 1.5, 0.2)
+rotation = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.6, 0.5)
 
 [resource]
-script = ExtResource("2_ii0e8")
+script = ExtResource("5_744wj")
+accessory_placements = Array[ExtResource("1_5gnt7")]([SubResource("Resource_ryjws"), SubResource("Resource_2cphq"), SubResource("Resource_mw3is")])
+slot = 3
+model = ExtResource("4_5gnt7")
 item_script = ExtResource("1_3e187")
 metadata/_custom_type_script = "uid://combwqypom1ru"

@@ -1,14 +1,36 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b4vjqai1lxjwd"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3]
 
-[ext_resource type="Texture2D" uid="uid://b5bjsfc0h6f4c" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/spatula.png" id="1_66ycg"]
-[ext_resource type="Script" uid="uid://cl2dq56p67u70" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_spatula.gd" id="2_66ycg"]
-[ext_resource type="PackedScene" uid="uid://xv60gygynud1" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/spatula.tscn" id="3_ef5of"]
-[ext_resource type="AudioStream" uid="uid://drn5cxhlau473" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/Shovel.ogg" id="4_66ycg"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="5_s43wd"]
+[ext_resource type="Texture2D" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/spatula.png" id="1_66ycg"]
+[ext_resource type="Script" path="res://objects/items/classes/accessory_placement.gd" id="1_flub8"]
+[ext_resource type="Script" path="res://objects/items/classes/body_placement.gd" id="2_7kx42"]
+[ext_resource type="Script" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_spatula.gd" id="2_66ycg"]
+[ext_resource type="PackedScene" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/spatula.tscn" id="3_ef5of"]
+[ext_resource type="AudioStream" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/Shovel.ogg" id="4_66ycg"]
+[ext_resource type="Script" path="res://objects/items/classes/item_accessory.gd" id="7_s43wd"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_7kx42")
+position = Vector3(0, 0.95, 0.7)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_7kx42")
+body_type = 1
+position = Vector3(0, 0.9, 0.5)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_7kx42")
+body_type = 2
+position = Vector3(0, 1.1, 0.6)
+rotation = Vector3(15, 0, 0)
+scale = Vector3(2.75, 2.75, 2.75)
 
 [resource]
-script = ExtResource("5_s43wd")
+script = ExtResource("7_s43wd")
+accessory_placements = Array[ExtResource("1_flub8")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
 qualitoon = 2
+slot = 3
 ui_cam_offset = 0.15
 item_name = "Spatula"
 item_description = "Flip your stats!"

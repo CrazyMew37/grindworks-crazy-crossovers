@@ -1,14 +1,38 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b5u2qkfra0aka"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3]
 
-[ext_resource type="Texture2D" uid="uid://dksip0lrnrjhq" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/electricguitar.png" id="1_axwun"]
-[ext_resource type="Script" uid="uid://btd43gtlj5wn0" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_electric_guitar.gd" id="2_axwun"]
-[ext_resource type="PackedScene" uid="uid://dvr7rucrwtft7" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/electric_guitar.tscn" id="3_4nqfo"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="4_3eh01"]
-[ext_resource type="AudioStream" uid="uid://cypxo74xoek" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/electricguitar.ogg" id="4_axwun"]
+[ext_resource type="Script" path="res://objects/items/classes/accessory_placement.gd" id="1_3eh01"]
+[ext_resource type="Texture2D" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/electricguitar.png" id="1_axwun"]
+[ext_resource type="Script" path="res://objects/items/classes/body_placement.gd" id="2_3bklt"]
+[ext_resource type="Script" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_electric_guitar.gd" id="2_axwun"]
+[ext_resource type="PackedScene" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/electric_guitar.tscn" id="3_4nqfo"]
+[ext_resource type="AudioStream" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/electricguitar.ogg" id="4_axwun"]
+[ext_resource type="Script" path="res://objects/items/classes/item_accessory.gd" id="7_go457"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_3bklt")
+position = Vector3(0, 0.8, 0.75)
+rotation = Vector3(0, -90, 20)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_3bklt")
+body_type = 1
+position = Vector3(0, 0.75, 0.55)
+rotation = Vector3(0, -90, 15)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_3bklt")
+body_type = 2
+position = Vector3(0, 0.85, 0.6)
+rotation = Vector3(0, -90, 5)
+scale = Vector3(2.75, 2.75, 2.75)
 
 [resource]
-script = ExtResource("4_3eh01")
+script = ExtResource("7_go457")
+accessory_placements = Array[ExtResource("1_3eh01")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
 qualitoon = 2
+slot = 3
 ui_cam_offset = 0.15
 item_name = "Electric Guitar"
 item_description = "Make some loud music!"

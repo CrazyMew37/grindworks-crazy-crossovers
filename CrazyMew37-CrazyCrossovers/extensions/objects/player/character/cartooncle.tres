@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=22 format=3 uid="uid://b2ubrdij8yx6x"]
+[gd_resource type="Resource" script_class="PlayerCharacter" format=3 uid="uid://b2ubrdij8yx6x"]
 
 [ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="1_n4t8l"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="2_ft2c1"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://ts8xpgftpmty" path="res://objects/player/character.gd" id="10_yfvkm"]
 [ext_resource type="Resource" uid="uid://dl78ys2yepeoa" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/red_puyo.tres" id="11_me2bp"]
 [ext_resource type="Resource" uid="uid://dm6qqh4qusr46" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/blue_puyo.tres" id="12_l5hor"]
-[ext_resource type="Resource" uid="uid://dgt6w10xuv3em" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/green_puyo.tres" id="13_p0yxs"]
+[ext_resource type="Resource" uid="uid://fwphyafpsbkk" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/green_puyo.tres" id="13_p0yxs"]
 [ext_resource type="Resource" uid="uid://b50vvmod5h2w3" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/yellow_puyo.tres" id="14_k55jf"]
 [ext_resource type="Resource" uid="uid://ce8nlg2w08wef" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/passive/purple_puyo.tres" id="15_gscmr"]
 [ext_resource type="Resource" uid="uid://b0ghw33kag844" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/resources/character_items/garbage_puyo_carbuncle.tres" id="16_me2bp"]

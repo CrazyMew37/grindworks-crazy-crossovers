@@ -1,13 +1,38 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://wof601gcn0uf"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3]
 
-[ext_resource type="Texture2D" uid="uid://dxt8n11pew13c" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/slingshot.png" id="1_e7bsw"]
-[ext_resource type="PackedScene" uid="uid://cqur5id0568qb" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/slingshot.tscn" id="2_e7bsw"]
-[ext_resource type="AudioStream" uid="uid://do1ubqpovq3x8" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/abslingshot.ogg" id="3_h1idt"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="4_pwsjk"]
+[ext_resource type="Script" path="res://objects/items/classes/accessory_placement.gd" id="1_1jm3l"]
+[ext_resource type="Texture2D" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/slingshot.png" id="1_e7bsw"]
+[ext_resource type="PackedScene" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/slingshot.tscn" id="2_e7bsw"]
+[ext_resource type="Script" path="res://objects/items/classes/body_placement.gd" id="2_pwsjk"]
+[ext_resource type="AudioStream" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/abslingshot.ogg" id="3_h1idt"]
+[ext_resource type="Script" path="res://objects/items/classes/item_accessory.gd" id="6_twxk0"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_pwsjk")
+position = Vector3(0, 0.8, 0.75)
+rotation = Vector3(15, -180, 0)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_pwsjk")
+body_type = 1
+position = Vector3(0, 0.75, 0.6)
+rotation = Vector3(15, -180, 0)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_pwsjk")
+body_type = 2
+position = Vector3(0, 1, 0.65)
+rotation = Vector3(0, 180, 0)
+scale = Vector3(2.5, 2.5, 2.5)
 
 [resource]
-script = ExtResource("4_pwsjk")
+script = ExtResource("6_twxk0")
+accessory_placements = Array[ExtResource("1_1jm3l")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
 qualitoon = 2
+rarity = 4
+slot = 3
 ui_cam_offset = 0.15
 item_name = "Slingshot"
 item_description = "Ready... FIRE!"

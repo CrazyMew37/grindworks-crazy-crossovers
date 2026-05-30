@@ -1,13 +1,37 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bxlwr1tyri7s"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3 uid="uid://db1h2h2powa6m"]
 
+[ext_resource type="Script" uid="uid://fb0tqfojo57q" path="res://objects/items/classes/accessory_placement.gd" id="1_47pvd"]
 [ext_resource type="Texture2D" uid="uid://d088iefqmhm7j" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/tfbrooch.png" id="1_o0x1e"]
+[ext_resource type="Script" uid="uid://duxq3xtgnln43" path="res://objects/items/classes/body_placement.gd" id="2_a4hh6"]
 [ext_resource type="Script" uid="uid://b4q7va5i36xni" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_transformation_brooch.gd" id="2_o0x1e"]
 [ext_resource type="PackedScene" uid="uid://c6swtnttcytog" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/transfomration_brooch.tscn" id="3_slw0k"]
 [ext_resource type="AudioStream" uid="uid://8vjo40mj15u4" path="res://audio/sfx/items/SZ_MM_fanfare.ogg" id="4_47pvd"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="5_ax6mq"]
+[ext_resource type="Script" uid="uid://dvu24b3o8i3sj" path="res://objects/items/classes/item_accessory.gd" id="7_ax6mq"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_a4hh6")
+position = Vector3(0, 0.9, -0.7)
+rotation = Vector3(0, 90, 40)
+scale = Vector3(2, 2, 2)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_a4hh6")
+body_type = 1
+position = Vector3(0, 0.8, -0.6)
+rotation = Vector3(0, 90, 15)
+scale = Vector3(2, 2, 2)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_a4hh6")
+body_type = 2
+position = Vector3(0, 1.2, -0.55)
+rotation = Vector3(0, 90, 10)
+scale = Vector3(2, 2, 2)
 
 [resource]
-script = ExtResource("5_ax6mq")
+script = ExtResource("7_ax6mq")
+accessory_placements = Array[ExtResource("1_47pvd")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
+slot = 3
 ui_cam_offset = 0.15
 item_name = "Transformation Brooch"
 item_description = "Moon Prism Power!"

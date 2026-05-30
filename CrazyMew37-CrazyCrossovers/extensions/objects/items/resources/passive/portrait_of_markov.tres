@@ -1,12 +1,36 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://blxwhl2nrh1gr"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3]
 
-[ext_resource type="Texture2D" uid="uid://t0ly2r84fkd4" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/portraitofmarkov.png" id="1_m7pj8"]
-[ext_resource type="PackedScene" uid="uid://8h2wi3bqdtl8" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/portrait_of_markov.tscn" id="2_m7pj8"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="4_lybe4"]
+[ext_resource type="Script" path="res://objects/items/classes/accessory_placement.gd" id="1_8xd2u"]
+[ext_resource type="Texture2D" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/portraitofmarkov.png" id="1_m7pj8"]
+[ext_resource type="Script" path="res://objects/items/classes/body_placement.gd" id="2_duotm"]
+[ext_resource type="PackedScene" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/portrait_of_markov.tscn" id="2_m7pj8"]
+[ext_resource type="Script" path="res://objects/items/classes/item_accessory.gd" id="5_lybe4"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_duotm")
+position = Vector3(0, 0.8, 0.8)
+rotation = Vector3(0, -90, 15)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_duotm")
+body_type = 1
+position = Vector3(0, 0.75, 0.55)
+rotation = Vector3(0, -90, 15)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_duotm")
+body_type = 2
+position = Vector3(0, 1.15, 0.6)
+rotation = Vector3(0, -90, 10)
+scale = Vector3(2.5, 2.5, 2.5)
 
 [resource]
-script = ExtResource("4_lybe4")
+script = ExtResource("5_lybe4")
+accessory_placements = Array[ExtResource("1_8xd2u")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
 qualitoon = 1
+slot = 3
 ui_cam_offset = 0.15
 item_name = "Portrait of Markov"
 item_description = "An interesting read"

@@ -1,13 +1,37 @@
-[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://cuu14iu55orjm"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3 uid="uid://cuu14iu55orjm"]
 
+[ext_resource type="Script" uid="uid://fb0tqfojo57q" path="res://objects/items/classes/accessory_placement.gd" id="1_46mjf"]
 [ext_resource type="Texture2D" uid="uid://dniba2lp7oh7k" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/rupert.png" id="1_h60yx"]
 [ext_resource type="Script" uid="uid://dauu8esudryh6" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_rupert.gd" id="2_h60yx"]
+[ext_resource type="Script" uid="uid://duxq3xtgnln43" path="res://objects/items/classes/body_placement.gd" id="2_ijt6q"]
 [ext_resource type="PackedScene" uid="uid://x8l6c4hagf6h" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/rupert.tscn" id="3_uhpju"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="5_trvle"]
+[ext_resource type="Script" uid="uid://dvu24b3o8i3sj" path="res://objects/items/classes/item_accessory.gd" id="6_vqqom"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_ijt6q")
+position = Vector3(0, 0.8, 0.7)
+rotation = Vector3(0, -90, 15)
+scale = Vector3(3, 3, 3)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_ijt6q")
+body_type = 1
+position = Vector3(0, 0.75, 0.5)
+rotation = Vector3(0, -90, 15)
+scale = Vector3(3, 3, 3)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_ijt6q")
+body_type = 2
+position = Vector3(0, 1.15, 0.55)
+rotation = Vector3(0, -90, 10)
+scale = Vector3(3, 3, 3)
 
 [resource]
-script = ExtResource("5_trvle")
+script = ExtResource("6_vqqom")
+accessory_placements = Array[ExtResource("1_46mjf")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
 rarity = 3
+slot = 3
 ui_cam_offset = 0.15
 item_name = "Rupert"
 item_description = "Your hubris will be your downfall"

@@ -1,10 +1,36 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dvnvct8jgd1qf"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3 uid="uid://cn8djhbafwqha"]
 
 [ext_resource type="Script" uid="uid://bep6bdhbngwud" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_sailor_moonkey_setup.gd" id="1_u0sfr"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="2_75cp2"]
+[ext_resource type="Script" uid="uid://fb0tqfojo57q" path="res://objects/items/classes/accessory_placement.gd" id="1_ypo0t"]
+[ext_resource type="Script" uid="uid://duxq3xtgnln43" path="res://objects/items/classes/body_placement.gd" id="2_ckftl"]
+[ext_resource type="PackedScene" uid="uid://c6swtnttcytog" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/transfomration_brooch.tscn" id="4_ypo0t"]
+[ext_resource type="Script" uid="uid://dvu24b3o8i3sj" path="res://objects/items/classes/item_accessory.gd" id="5_lu210"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_ckftl")
+position = Vector3(0, 0.9, -0.7)
+rotation = Vector3(0, 90, 40)
+scale = Vector3(2, 2, 2)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_ckftl")
+body_type = 1
+position = Vector3(0, 0.8, -0.6)
+rotation = Vector3(0, 90, 15)
+scale = Vector3(2, 2, 2)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_ckftl")
+body_type = 2
+position = Vector3(0, 1.2, -0.55)
+rotation = Vector3(0, 90, 10)
+scale = Vector3(2, 2, 2)
 
 [resource]
-script = ExtResource("2_75cp2")
+script = ExtResource("5_lu210")
+accessory_placements = Array[ExtResource("1_ypo0t")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
+slot = 3
+model = ExtResource("4_ypo0t")
 item_script = ExtResource("1_u0sfr")
 shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)
 metadata/_custom_type_script = "uid://combwqypom1ru"

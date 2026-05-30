@@ -1,13 +1,36 @@
-[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://d34oipbcqjfxk"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3 uid="uid://dgvdau6dklc87"]
 
 [ext_resource type="Texture2D" uid="uid://da7acgt2smlkx" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/rivercrystals.png" id="1_fg0rb"]
+[ext_resource type="Script" uid="uid://fb0tqfojo57q" path="res://objects/items/classes/accessory_placement.gd" id="1_q8w7w"]
 [ext_resource type="Script" uid="uid://clqiib5tu047h" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_river_crystals.gd" id="2_04agq"]
+[ext_resource type="Script" uid="uid://duxq3xtgnln43" path="res://objects/items/classes/body_placement.gd" id="2_dxi8g"]
 [ext_resource type="PackedScene" uid="uid://ckug3wvfxc6f5" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/rivercrystals.tscn" id="3_q8w7w"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="5_4y4a5"]
+[ext_resource type="Script" uid="uid://dvu24b3o8i3sj" path="res://objects/items/classes/item_accessory.gd" id="6_bx0fl"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_dxi8g")
+position = Vector3(0, 0.9, -0.75)
+rotation = Vector3(20, 0, 0)
+scale = Vector3(2, 2, 2)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_dxi8g")
+body_type = 1
+position = Vector3(0, 0.8, -0.6)
+scale = Vector3(2, 2, 2)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_dxi8g")
+body_type = 2
+position = Vector3(0, 1.2, -0.5)
+scale = Vector3(2, 2, 2)
 
 [resource]
-script = ExtResource("5_4y4a5")
+script = ExtResource("6_bx0fl")
+accessory_placements = Array[ExtResource("1_q8w7w")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
 qualitoon = 2
+rarity = 2
+slot = 3
 ui_cam_offset = 0.15
 item_name = "River Crystals"
 item_description = "A resonating voice"

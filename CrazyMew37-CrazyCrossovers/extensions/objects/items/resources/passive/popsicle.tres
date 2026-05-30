@@ -1,24 +1,48 @@
-[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://ds3e31q4mls4v"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3 uid="uid://ci5belfg75ith"]
 
+[ext_resource type="Script" uid="uid://fb0tqfojo57q" path="res://objects/items/classes/accessory_placement.gd" id="1_m0ktv"]
 [ext_resource type="Texture2D" uid="uid://u3wig2l2iva4" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/popsicle.png" id="1_ocfij"]
 [ext_resource type="PackedScene" uid="uid://cb1nolv2fl6hj" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/popsicle.tscn" id="2_w6slm"]
+[ext_resource type="Script" uid="uid://duxq3xtgnln43" path="res://objects/items/classes/body_placement.gd" id="2_xe6po"]
 [ext_resource type="AudioStream" uid="uid://xd35cu8acybx" path="res://audio/sfx/battle/gags/toonup/sparkly.ogg" id="3_m0ktv"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="3_w6slm"]
+[ext_resource type="Script" uid="uid://dvu24b3o8i3sj" path="res://objects/items/classes/item_accessory.gd" id="6_nbmbh"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_xe6po")
+position = Vector3(0.1, 0.8, 0.7)
+rotation = Vector3(0, -40, 45)
+scale = Vector3(3, 3, 3)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_xe6po")
+body_type = 1
+position = Vector3(0.1, 0.75, 0.5)
+rotation = Vector3(0, -40, 45)
+scale = Vector3(3, 3, 3)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_xe6po")
+body_type = 2
+position = Vector3(0.1, 1.05, 0.6)
+rotation = Vector3(0, -40, 35)
+scale = Vector3(3, 3, 3)
 
 [resource]
-script = ExtResource("3_w6slm")
+script = ExtResource("6_nbmbh")
+accessory_placements = Array[ExtResource("1_m0ktv")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
 qualitoon = 1
+slot = 3
 ui_cam_offset = 0.15
 item_name = "Popsicle"
 item_description = "A very chilly treat"
 big_description = "+ 10 Max Laff
-- 15% Speed"
+- 10% Speed"
 model = ExtResource("2_w6slm")
 pickup_sfx = ExtResource("3_m0ktv")
 stats_add = {
 "hp": 10,
 "max_hp": 10,
-"speed": -0.15
+"speed": -0.1
 }
 icon = ExtResource("1_ocfij")
 shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)

@@ -1,10 +1,36 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bu6jxihurqvhw"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3 uid="uid://iblecdla583k"]
 
 [ext_resource type="Script" uid="uid://dyjyajvm413n0" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_likat_setup.gd" id="1_882es"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="2_w8ojd"]
+[ext_resource type="Script" uid="uid://fb0tqfojo57q" path="res://objects/items/classes/accessory_placement.gd" id="1_vcuyr"]
+[ext_resource type="Script" uid="uid://duxq3xtgnln43" path="res://objects/items/classes/body_placement.gd" id="2_wbhha"]
+[ext_resource type="PackedScene" uid="uid://ds3540pi1bvwk" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/terastal_pendant.tscn" id="4_81co0"]
+[ext_resource type="Script" uid="uid://dvu24b3o8i3sj" path="res://objects/items/classes/item_accessory.gd" id="5_1aif6"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_wbhha")
+position = Vector3(0, 1.3, -0.15)
+rotation = Vector3(0, 80, 60)
+scale = Vector3(2, 2, 2)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_wbhha")
+body_type = 1
+position = Vector3(-0.05, 1.2, -0.2)
+rotation = Vector3(0, 75, 50.76)
+scale = Vector3(2, 2, 2)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_wbhha")
+body_type = 2
+position = Vector3(0, 1.7, -0.05)
+rotation = Vector3(0, 90, 60)
+scale = Vector3(2, 2, 2)
 
 [resource]
-script = ExtResource("2_w8ojd")
+script = ExtResource("5_1aif6")
+accessory_placements = Array[ExtResource("1_vcuyr")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
+slot = 3
+model = ExtResource("4_81co0")
 item_script = ExtResource("1_882es")
 shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)
 metadata/_custom_type_script = "uid://combwqypom1ru"

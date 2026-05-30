@@ -1,19 +1,45 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c75dowb6v4rbm"]
+[gd_resource type="Resource" script_class="ItemAccessory" format=3 uid="uid://boq11v8fpcvum"]
 
 [ext_resource type="Texture2D" uid="uid://dvwxcjcjaqw4i" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/ui_assets/player_ui/pocket_prank_icons/kendama.png" id="1_sgiun"]
+[ext_resource type="Script" uid="uid://fb0tqfojo57q" path="res://objects/items/classes/accessory_placement.gd" id="1_t6k0l"]
+[ext_resource type="Script" uid="uid://duxq3xtgnln43" path="res://objects/items/classes/body_placement.gd" id="2_6bvl4"]
 [ext_resource type="Script" uid="uid://dbgtk4ouxmsyq" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/item_kendama.gd" id="2_c0y25"]
 [ext_resource type="PackedScene" uid="uid://beltwro0h0jhu" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/objects/items/custom/kendama.tscn" id="3_4f7oq"]
-[ext_resource type="Script" uid="uid://combwqypom1ru" path="res://objects/items/classes/item.gd" id="4_t6k0l"]
+[ext_resource type="AudioStream" uid="uid://5b30lud8mom8" path="res://mods-unpacked/CrazyMew37-CrazyCrossovers/extensions/audio/sfx/maguro_swingin.ogg" id="4_c0y25"]
+[ext_resource type="Script" uid="uid://dvu24b3o8i3sj" path="res://objects/items/classes/item_accessory.gd" id="7_u465v"]
+
+[sub_resource type="Resource" id="Resource_xs6h0"]
+script = ExtResource("2_6bvl4")
+position = Vector3(0, 0.8, 0.7)
+rotation = Vector3(0, -180, 0)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_ba86b"]
+script = ExtResource("2_6bvl4")
+body_type = 1
+position = Vector3(0, 0.75, 0.5)
+rotation = Vector3(0, -180, 0)
+scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="Resource" id="Resource_0hxml"]
+script = ExtResource("2_6bvl4")
+body_type = 2
+position = Vector3(0, 1, 0.55)
+rotation = Vector3(0, -180, 0)
+scale = Vector3(2.5, 2.5, 2.5)
 
 [resource]
-script = ExtResource("4_t6k0l")
+script = ExtResource("7_u465v")
+accessory_placements = Array[ExtResource("1_t6k0l")]([SubResource("Resource_xs6h0"), SubResource("Resource_ba86b"), SubResource("Resource_0hxml")])
 qualitoon = 3
+slot = 3
 ui_cam_offset = 0.15
 item_name = "Kendama"
 item_description = "Swingin'!"
 big_description = "+ 20% Drop damage
 - 10% Aftershock damage"
 model = ExtResource("3_4f7oq")
+pickup_sfx = ExtResource("4_c0y25")
 stats_add = {
 "gag_boost:Drop": 0.2
 }
